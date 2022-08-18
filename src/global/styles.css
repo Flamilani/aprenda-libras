@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Libras 2019";
+    src: local(Raleway), url(../assets/fonts/Libras2019-Regular.ttf);
+ }
+
+ @font-face {
+    font-family: "LIBRAS PROF CLEBER COUTO";
+    src: local(Raleway), url(../assets/fonts/Libras2013.ttf);
+ }
+
+ @font-face {
+    font-family: "Libras-2016";
+    src: local(Raleway), url(../assets/fonts/Libras-2016.ttf);
+ }
+
+ @font-face {
+    font-family: "Libras Black 2020";
+    src: local(Raleway), url(../assets/fonts/LibrasBlack2020-Regular.ttf);
+ }
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ html, body {
+    font-family: Cursive, Helvetica, sans-serif;
+    background-color: #ededed;
+ }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+article {
+    min-height: calc(100vh - 40px);
+}
+
+main {
+    grid-column: 2;
+    padding: 20px;
+}
+
+footer {
+    align-self: end;
+    grid-column: 2;
+}
+
+a {
+    color: #3f51b5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00bcd4;
+}
+
+a:active {
+    color: #03a9f4;
+}
+
+
+/* PAGES */
+
+.sectionTop {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sectionTop span {
+    padding: 12px;
+    vertical-align: super;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.linkTop {
+    font-size: 30px;
+}
+
+.formGroup {
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 10px;
+ }
+
+ .formGroup label {
+    display: block;
+    font-size: 22px;
+    padding: 5px;
+ }
+ 
+ .result {
+    font-size: 80px;
+    border: 2px solid #979797;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    padding-top: 15px;
+    text-align: center;
+    word-break: break-word;
+ }
+
+ .fontLibrasA {
+    font-family: "Libras 2019";
+ }
+
+ .fontLibrasB {
+    font-family: "LIBRAS PROF CLEBER COUTO";
+ }
+
+ .fontLibrasC {
+    font-family: "Libras-2016";
+ }
+
+ .fontLibrasD {
+    font-family: "Libras Black 2020";
+ }
+ 
+ .inputCamp {
+    border-radius: 8px;
+    border: 2px solid #979797;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+ }

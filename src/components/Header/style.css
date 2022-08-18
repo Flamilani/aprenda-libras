@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #3f51b5;
+    padding: 30px;    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.header h1 span {
+    display: block;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.header img {
+    width: 125px;
+    height: 100%;
+    filter: brightness(300%);
+}

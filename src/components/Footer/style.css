@@ -1,0 +1,15 @@
+footer {
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #b7b7b7;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    background-color: #ccc;
+}
+
+footer svg {
+    color: darkcyan;
+    font-size: 20px;
+    vertical-align: bottom;
+}
