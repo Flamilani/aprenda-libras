@@ -9,6 +9,8 @@ import gif01 from '../../assets/gifs/bom-dia.gif';
 import gif02 from '../../assets/gifs/boa-tarde.gif';
 import gif03 from '../../assets/gifs/boa-noite.gif';
 
+import ReactTooltip from 'react-tooltip';
+
 import './style.css';
 
 class ThirdApp extends React.Component {
@@ -59,13 +61,14 @@ class ThirdApp extends React.Component {
                         </Link>
                         <span>Saudações</span>
                     </div>
-                    <div className="cardGroup">
+                    <div className="cardGroup greetingGroup">
                         <div onClick={this.handleChangeA} className="cardApp greeting">
                             {
                                 this.state.greetingA ?
-                                    <div>
-                                        <img src={gif01} alt="Bom dia" />
-                                        <p>Bom dia <br />em Libras</p>
+                                    <div>                                       
+                                        <ReactTooltip id="dia" place="top" effect="solid" />                                          
+                                        <img data-tip="Bom dia, estou tomando café" data-for="dia" src={gif01} alt="Bom dia em Libras" />
+                                        <p>Bom dia em Libras</p>
                                     </div>
                                     :
                                     <div>
@@ -79,8 +82,9 @@ class ThirdApp extends React.Component {
                             {
                                 this.state.greetingB ?
                                     <div>
-                                        <img src={gif02} alt="Boa tarde" />
-                                        <p>Boa tarde <br />em Libras</p>
+                                        <ReactTooltip id="tarde" place="top" effect="solid" />
+                                        <img data-tip="Boa tarde, estou trabalhando" data-for="tarde" src={gif02} alt="Boa tarde em Libras" />
+                                        <p>Boa tarde em Libras</p>
                                     </div>
                                     :
                                     <div>
@@ -94,8 +98,9 @@ class ThirdApp extends React.Component {
                         {
                                 this.state.greetingC ?
                                     <div>
-                                        <img src={gif03} alt="Boa noite em Libras" />
-                                        <p>Boa noite <br />em Libras</p>
+                                        <ReactTooltip id="noite" place="top" effect="solid" />
+                                        <img data-tip="Boa noite, vou dormir. Tchau!" data-for="noite" src={gif03} alt="Boa noite em Libras" />
+                                        <p>Boa noite em Libras</p>
                                     </div>
                                     :
                                     <div>

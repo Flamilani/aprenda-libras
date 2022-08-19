@@ -20,8 +20,14 @@
     margin-top: 5px;
 }
 
-.header img {
+.header .logo {
     width: 125px;
     height: 100%;
     filter: brightness(300%);
+}
+
+.header .retrato {
+    width: 100px;
+    height: 100%;
+    margin-left: 15px;
 }

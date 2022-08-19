@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsArrowLeftSquareFill } from 'react-icons/bs';
@@ -6,6 +7,7 @@ import './style.css';
 import { removeAcento } from './../../utils/helper';
 
 class FirstApp extends React.Component {
+    
     state = {
         name: "",
         showOption: "a"
@@ -22,10 +24,9 @@ class FirstApp extends React.Component {
             showOption: e.target.value
         })
         console.log(e.target.value)
-    }
+    }    
 
-    render() {
-
+    render() {    
         return (
             <>
                 <form autoComplete="off">
@@ -63,7 +64,9 @@ class FirstApp extends React.Component {
                             <label>Meu nome em Libras</label>
                             {
                                 this.state.showOption === "a" &&
-                                <p className="result fontLibrasA">{removeAcento(this.state.name)}</p>
+                                <div id="domEl" ref="{domEl}">
+                                    <p className="result fontLibrasA">{removeAcento(this.state.name)}</p>
+                                </div>
                             }
                             {
                                 this.state.showOption === "b" &&
@@ -77,7 +80,7 @@ class FirstApp extends React.Component {
                                 this.state.showOption === "d" &&
                                 <p className="result fontLibrasD">{removeAcento(this.state.name)}</p>
                             }
-                            <button className="btnDownload">Baixar imagem em jpg</button>
+                            {/* <button onClick="{}" className="btnDownload">Baixar imagem em jpg</button> */}
                         </div>
                     }
 

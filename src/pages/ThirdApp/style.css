@@ -10,3 +10,7 @@
     max-width: 220px;
     width: 100%;
 }
+
+.cardGroup.greetingGroup {
+    margin-top: 35px;
+}
