@@ -1,0 +1,147 @@
+/* QUIZ */
+
+.NextStep{
+    background-color: #009e00;
+    color:#fff;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.NextStep:hover{
+    background-color: green;
+}
+.NextStep[disabled]{
+    display: none;
+}
+
+.finalPage{
+    text-align: center;
+}
+.finalPage h1{
+    text-align: center;
+    margin: 15px 0;
+    font-size: 25px;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    color: #008416;
+    text-transform: none;
+    text-shadow: none;
+}
+
+/*  QUESTION  */
+
+.Content h1{
+    margin: 15px 0;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-family: Arial,sans-serif;
+    font-weight: normal;
+    color: #0019a1;
+    text-transform: none;
+    text-shadow: none;
+    text-align: left;
+}
+
+.Content {
+    background: #fff;
+    padding: 15px;
+    padding-top: 0.2px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+aside.quiz {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ANSWER  */
+
+.Answers{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.Answers li{
+    padding: 15px;
+    background-color: #ccc;
+    margin: 0 0 5px;
+    border-radius: 5px;
+}
+.Answers li:hover{
+    cursor: pointer;
+    background-color: #a2a2a2;
+}
+.Answers .correct,
+.Answers .correct:hover {
+    background-color: #1db900;
+}
+.Answers .incorrect,
+.Answers .incorrect:hover {
+    background-color: #ec0000;
+    color: #fff;
+}
+.Answers[disabled] {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.correctAnswer {
+    background-color: lightgreen;
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: table;
+    border-radius: 5px;
+}
+
+.incorrectAnswer {
+    background-color: lightcoral;
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: table;
+    border-radius: 5px;
+}
+
+.btnPlayAgain {
+    background: #00bcd4;
+    padding: 5px;
+    font-size: 15px;
+    margin-top: 15px;
+    border: 2px solid #607d8b;
+    border-radius: 5px;
+}
+
+.imgAnswer {
+    width: 100%;
+}
+
+.imageSize {
+    width: 100px;
+}
+
+.correctAnswer svg {
+    font-size: 35px;
+    vertical-align: middle;
+    background: blue;
+    color: #fff;
+    padding: 5px;
+    border-radius: 15px;
+    margin-left: 5px;
+}
+
+.incorrectAnswer svg {
+    font-size: 35px;
+    vertical-align: middle;
+    background: blue;
+    color: #fff;
+    padding: 5px;
+    border-radius: 15px;
+    margin-left: 5px;
+}

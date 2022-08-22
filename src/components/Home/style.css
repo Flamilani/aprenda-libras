@@ -13,12 +13,17 @@
 .cardApp img {
     border-radius: 10px;
     border: 2px solid #607d8b;
-    max-width: 220px;
-    width: 100%;
+    width: 140px;
     height: auto;
 }
 
 .cardApp img:hover {
     transition: 0.5s;
     filter: brightness(80%);
+}
+
+.cardHome {
+    width: 100%;
+    max-width: 630px;
+    margin: 0 auto;
 }

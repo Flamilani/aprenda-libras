@@ -1,0 +1,60 @@
+.sectionTop {
+    max-width: 500px;
+}
+
+.sectionTop span {
+    padding: 12px;
+    vertical-align: super;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.linkTop {
+    font-size: 30px;
+}
+
+.formGroup {
+    max-width: 500px;
+    width: 100%;
+ }
+
+ .inputCamp.name {
+    text-transform: uppercase;
+ }
+ 
+ .formControl {
+    padding: 6px;
+    border-radius: 7px;
+    font-size: 18px;
+    display: flex;
+    float: right;
+}
+
+.btnDownload {
+    border: none;
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 7px;
+    border-radius: 6px;
+    margin: 13px;
+    margin-left: 0px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+ ::-webkit-input-placeholder { /* WebKit browsers */
+    text-transform: none;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    text-transform: none;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    text-transform: none;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    text-transform: none;
+}
+::placeholder { /* Recent browsers */
+    text-transform: none;
+}

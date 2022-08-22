@@ -8,7 +8,8 @@ import './style.css';
 
 function Home() {
     return (
-        <div className="cardGroup">
+        <div className="cardGroup cardHome">
+
             <div className="cardApp">
                 <Link to="/nomes">
                     <img src={capa01} alt="Nomes" />
@@ -25,6 +26,19 @@ function Home() {
                 <Link to="/saudacoes">
                     <img src={capa03} alt="Saudações" />
                     <p>Saudações</p>
+                </Link>
+            </div>
+
+            <div className="cardApp">
+                <Link to="/linhadetempo">
+                    <img src={capa03} alt="Linha de tempo" />
+                    <p>Linha de Tempo</p>
+                </Link>
+            </div>
+            <div className="cardApp">
+                <Link to="/quiz">
+                    <img src={capa03} alt="Quiz" />
+                    <p>Quiz</p>
                 </Link>
             </div>
         </div>
