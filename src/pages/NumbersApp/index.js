@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BsArrowLeftSquareFill } from 'react-icons/bs';
+import { Breadcrumb } from '../../components/Breadcrumb';
 
 import './style.css';
 
@@ -28,12 +27,7 @@ class SecondApp extends React.Component {
         return (
             <>
                 <form autoComplete="off">
-                <div className="sectionTop">
-                        <Link className="linkTop" to="/">
-                            <BsArrowLeftSquareFill />
-                        </Link>
-                        <span>Números</span>
-                    </div>
+                <Breadcrumb title="Números" styles="sectionTop"></Breadcrumb>
                     <div className="formGroup number">
                         <label htmlFor="number">Número</label>
                         <input

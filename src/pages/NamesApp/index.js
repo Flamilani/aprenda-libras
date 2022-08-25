@@ -1,10 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BsArrowLeftSquareFill } from 'react-icons/bs';
+import { Breadcrumb } from '../../components/Breadcrumb';
+import { removeAcento } from '../../utils/helper';
 
 import './style.css';
-import { removeAcento } from '../../utils/helper';
 
 class NamesApp extends React.Component {
     
@@ -29,13 +28,8 @@ class NamesApp extends React.Component {
     render() {    
         return (
             <>
-                <aside autoComplete="off">
-                    <div className="sectionTop">
-                        <Link aria-label="Retornar para Início" className="linkTop" to="/">
-                            <BsArrowLeftSquareFill />
-                        </Link>
-                        <span>Nomes</span>
-                    </div>
+                <form autoComplete="off">
+                    <Breadcrumb title="Nomes" styles="sectionTop"></Breadcrumb>
                     <div className="formGroup">
                         <label htmlFor="name">Seu nome</label>
                         <input
@@ -84,7 +78,7 @@ class NamesApp extends React.Component {
                         </div>
                     }
 
-                </aside>
+                </form>
             </>
         )
     }

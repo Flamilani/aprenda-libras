@@ -17,12 +17,13 @@
 
 .finalPage{
     text-align: center;
+    padding-bottom: 10px;
 }
-.finalPage h1{
+
+.finalPage .titleFinal {
     text-align: center;
     margin: 15px 0;
     font-size: 25px;
-    font-family: Arial,sans-serif;
     font-weight: bold;
     color: #008416;
     text-transform: none;
@@ -110,12 +111,18 @@ aside.quiz {
 }
 
 .btnPlayAgain {
-    background: #00bcd4;
-    padding: 5px;
+    background: #3f51b5;
+    color: #fff;
+    padding: 10px;
     font-size: 15px;
     margin-top: 15px;
-    border: 2px solid #607d8b;
+    border: none;
     border-radius: 5px;
+}
+
+.btnPlayAgain:hover {
+    background: #00bcd4;
+    color: #3f51b5;
 }
 
 .imgAnswer {
@@ -144,4 +151,53 @@ aside.quiz {
     padding: 5px;
     border-radius: 15px;
     margin-left: 5px;
+}
+
+.stepsTop {
+    background-color: #02d6f1;
+    border-radius: 5px;
+    border: 1px solid #001bb3;
+    color: #001bb3;
+    padding: 5px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.fontSize {
+    margin-top: 20px;
+    font-size: 90px;
+}
+
+.fontSizeB {
+    margin-top: 20px;
+    font-size: 70px;
+}
+
+.divQuestion {
+    display: block;
+    text-align: center;
+}
+
+.imgQuestion {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 15px;
+    border: 2px solid darkblue;
+}
+
+.finalPage .scoreFinal {
+    font-size: 20px;
+    background-color: #10e4ff;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid darkblue;
+    border-radius: 10px;
+}
+
+.finalPage .scorePhase {
+    padding: 20px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 18px;
 }

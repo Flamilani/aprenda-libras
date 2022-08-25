@@ -1,6 +1,5 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { Link } from 'react-router-dom';
-import { BsArrowLeftSquareFill } from 'react-icons/bs';
+import { Breadcrumb } from '../../components/Breadcrumb';
 import 'react-vertical-timeline-component/style.min.css';
 import { } from 'react-icons/'
 import './style.css';
@@ -8,13 +7,8 @@ import capa from '../../assets/imgs/capa01.png';
 
 function TimelineApp() {
     return (
-        <aside autoComplete="off">
-            <div className="sectionTop">
-                <Link aria-label="Retornar para Início" className="linkTop" to="/">
-                    <BsArrowLeftSquareFill />
-                </Link>
-                <span>Linha de Tempo</span>
-            </div>
+        <aside>
+            <Breadcrumb title="Linha de Tempo" styles="sectionTop"></Breadcrumb>
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"

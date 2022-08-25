@@ -1,0 +1,14 @@
+.mapsApp svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+.AppMapa {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.listaEstado {
+  display: block;
+}

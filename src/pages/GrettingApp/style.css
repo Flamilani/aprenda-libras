@@ -1,0 +1,16 @@
+.cardApp {
+    cursor: pointer;
+}
+
+.sectionTop.greetingTop {
+    max-width: 700px;
+}
+
+.cardApp.greeting img {
+    max-width: 220px;
+    width: 100%;
+}
+
+.cardGroup.greetingGroup {
+    margin-top: 35px;
+}

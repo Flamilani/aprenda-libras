@@ -3,8 +3,10 @@ import Home from '../components/Home';
 import NamesApp from '../pages/NamesApp';
 import NumbersApp from '../pages/NumbersApp';
 import QuizApp from '../pages/QuizApp/Quiz';
-import ThirdApp from '../pages/ThirdApp';
+import GrettingApp from '../pages/GrettingApp';
 import TimelineApp from '../pages/TimelineApp';
+import MapsApp from '../pages/MapsApp/MapMundi';
+import MapsBrazilApp from '../pages/MapsApp/MapBrasil';
 
 function RouteApp() {
     return (
@@ -28,7 +30,7 @@ function RouteApp() {
             </Route>
             <Route 
                 path="/saudacoes"
-                element={<ThirdApp />}
+                element={<GrettingApp />}
                 exact
             >
             </Route>
@@ -44,6 +46,18 @@ function RouteApp() {
                 exact
             >
             </Route>
+{/*             <Route 
+                path="/mapa"
+                element={<MapsApp />}
+                exact
+            >
+            </Route>
+            <Route 
+                path="/mapa-brasil"
+                element={<MapsBrazilApp />}
+                exact
+            >
+            </Route> */}
         </Routes>)
 }
 

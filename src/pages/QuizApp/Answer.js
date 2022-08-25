@@ -28,11 +28,11 @@ const Answer = (props) => {
                 </ul>
                 <div>
                     {
-                        props.correctAnswer ? <div className="correctAnswer">Reposta correta 
-                        <ReactTooltip html="true" id="dia" place="right" effect="solid" />
+                        props.correctAnswer ? <div className="correctAnswer">Resposta correta 
+                        <ReactTooltip html={true} id="dia" place="right" effect="solid" />
                         <FaSignLanguage data-tip="<img class='imageSize' src='https://umuarama.ifpr.edu.br/wp-content/uploads/2021/03/ellen-mascote.gif' />" data-for="dia" />
                         </div> : 
-                        props.clickedAnswer ? <div className="incorrectAnswer">Reposta incorreta <FaSignLanguage /></div> : ''
+                        props.clickedAnswer ? <div className="incorrectAnswer">Resposta incorreta <FaSignLanguage /></div> : ''
                     }
                 </div>
             </>

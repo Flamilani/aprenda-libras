@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import { BsArrowLeftSquareFill } from 'react-icons/bs';
+import { Breadcrumb } from '../../components/Breadcrumb';
 import Question from './Question';
 import Answer from './Answer';
-import { StateQuestions } from './state-questions';
+import { StateQuestions } from './state-questions.constant';
 import './style.css';
 
 export default class Quiz extends Component {
@@ -39,21 +39,23 @@ export default class Quiz extends Component {
 
     render(){
         let { questions, answers, correctAnswer, clickedAnswer, step, score } = this.state;
+
+        let scoreResult;
+        if ((( score / Object.keys(questions).length) * 100) === 100) {
+            scoreResult = "Parabéns, acertou tudo!";
+        } else {
+            scoreResult = "Tem que estudar mais";
+        }
         return(
             <aside className="quiz">
-            <div className="sectionTop">
-                <Link aria-label="Retornar para Início" className="linkTop" to="/">
-                    <BsArrowLeftSquareFill />
-                </Link>
-                <span>Quiz</span>
-            </div>
+            <Breadcrumb title="Quiz" styles="sectionTop"></Breadcrumb>
             <div className="Content">
                 {step <= Object.keys(questions).length ? 
                     (<>
+                        <div className="stepsTop">{step} / {Object.keys(questions).length}</div>
                         <Question
                             question={questions[step]}
-                        />
-                        {step} de {Object.keys(questions).length}
+                        />                        
                         <Answer
                             answer={answers[step]}
                             step={step}
@@ -70,10 +72,12 @@ export default class Quiz extends Component {
                         onClick={() => this.nextStep(step)}>Próximo</button>
                     </>) : (
                         <div className="finalPage">
-                            <h1>Completou a Quiz!</h1>
-                            <p>Seus pontos são: {score} de {Object.keys(questions).length}</p>
-                            <p>Obrigado por jogar!</p>
-                            <button type="button" className="btnPlayAgain">Jogar novamente</button>
+                            <h1 className="titleFinal">Terminou a Quiz!</h1>
+                            <p className="scoreFinal">Seus pontos são: {parseFloat(( score / Object.keys(questions).length) * 100).toFixed(0)}</p>
+                            <p className="scorePhase">{scoreResult}</p> 
+                            <Link className="btnPlayAgain" to="/quiz">
+                            Jogar novamente
+                            </Link>                        
                         </div>
                     )
                 }

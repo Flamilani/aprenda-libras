@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import capa01 from '../../assets/imgs/capa01.png';
 import capa02 from '../../assets/imgs/numeros.png';
 import capa03 from '../../assets/imgs/saudacoes.png';
+import capa04 from '../../assets/imgs/linha-tempo.png';
 
 import './style.css';
 
@@ -31,7 +32,7 @@ function Home() {
 
             <div className="cardApp">
                 <Link to="/linhadetempo">
-                    <img src={capa03} alt="Linha de tempo" />
+                    <img src={capa04} alt="Linha de tempo" />
                     <p>Linha de Tempo</p>
                 </Link>
             </div>
@@ -41,6 +42,12 @@ function Home() {
                     <p>Quiz</p>
                 </Link>
             </div>
+{/*             <div className="cardApp">
+                <Link to="/mapa">
+                    <img src={capa03} alt="Mapa" />
+                    <p>Mapa</p>
+                </Link>
+            </div> */}
         </div>
 
     )
