@@ -1,3 +1,56 @@
 .content{
     display: flex;
+    text-align: justify;    
+}
+
+.content .text {
+    display: block;
+    overflow-y: auto;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 15px;
+}
+
+.styleBackground {
+    background: 'rgb(33, 150, 243)';
+    color: '#fff';
+}
+
+.imgTimeline {
+    width: auto;
+    max-width: 200px;
+    height: 100%;
+    margin: 10px;
+    margin-left: 25px;
+}
+
+.imgTimelineH {
+    width: auto;
+    max-width: 350px;
+    height: 100%;
+    margin: 10px;
+    margin-left: 25px;
+}
+
+@media only screen and (min-width: 1170px) {
+    .imgTimelineH {
+        max-width: 230px;
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
+    .content {
+        flex-direction: column;
+    }
+  }
+
+.subtitle {
+    margin-top: 10px;
+}
+
+.vertical-timeline-element-date {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    line-height: 1;
 }

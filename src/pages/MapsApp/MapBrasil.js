@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import ReactTooltip from 'react-tooltip';
 import { Breadcrumb } from '../../components/Breadcrumb';
 
@@ -26,4 +26,4 @@ function MapsBrazilApp() {
   )
 }
 
-export default MapsBrazilApp; 
+export default MapsBrazilApp;  */

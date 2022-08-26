@@ -4,7 +4,7 @@ import img01 from '../../assets/imgs/imagem-bom-dia.png';
 import img02 from '../../assets/imgs/imagem-boa-tarde.png';
 import img03 from '../../assets/imgs/imagem-boa-noite.png';
 
-import gif01 from 'https://drive.google.com/file/d/1gWBbfRNOS34dSuQJVc-MgKv9CGlpD0Hf/view?usp=sharing';
+import gif01 from '../../assets/gifs/bom-dia.gif';
 import gif02 from '../../assets/gifs/boa-tarde.gif';
 import gif03 from '../../assets/gifs/boa-noite.gif';
 

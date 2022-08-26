@@ -4,6 +4,7 @@ import capa01 from '../../assets/imgs/capa01.png';
 import capa02 from '../../assets/imgs/numeros.png';
 import capa03 from '../../assets/imgs/saudacoes.png';
 import capa04 from '../../assets/imgs/linha-tempo.png';
+import capa05 from '../../assets/imgs/quiz.png';
 
 import './style.css';
 
@@ -38,7 +39,7 @@ function Home() {
             </div>
             <div className="cardApp">
                 <Link to="/quiz">
-                    <img src={capa03} alt="Quiz" />
+                    <img src={capa05} alt="Quiz" />
                     <p>Quiz</p>
                 </Link>
             </div>

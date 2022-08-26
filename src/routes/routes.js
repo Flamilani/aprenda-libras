@@ -5,8 +5,7 @@ import NumbersApp from '../pages/NumbersApp';
 import QuizApp from '../pages/QuizApp/Quiz';
 import GrettingApp from '../pages/GrettingApp';
 import TimelineApp from '../pages/TimelineApp';
-import MapsApp from '../pages/MapsApp/MapMundi';
-import MapsBrazilApp from '../pages/MapsApp/MapBrasil';
+/* import MapsApp from '../pages/MapsApp/MapMundi'; */
 
 function RouteApp() {
     return (

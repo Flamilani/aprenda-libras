@@ -2,8 +2,8 @@ import imagem from './../../assets/gifs/boa-tarde.gif';
 
 export const StateQuestions = {
     questions: {
-        1: <div>Escolha uma alternativa correta do nome: <br /> <div class="fontLibrasC fontSize">Priscila</div></div>,
-        2: <div>Escolha uma alternativa correta do número de celular: <br /> <div class="fontLibrasA fontSizeB">98124 7789</div></div>,
+        1: <div>Escolha uma alternativa correta do nome: <br /> <div className="fontLibrasC fontSize">Priscila</div></div>,
+        2: <div>Escolha uma alternativa correta do número de celular: <br /> <div className="fontLibrasA fontSizeB">98124 7789</div></div>,
         3: <div>Escolha uma alternativa correta do sinal de saudação: <br /><div className="divQuestion"><img className="imgQuestion" src={imagem} alt="Imagem" /></div></div>
     },
     answers: {
