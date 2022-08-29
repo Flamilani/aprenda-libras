@@ -2,9 +2,9 @@ import { Breadcrumb } from '../../components/Breadcrumb';
 import TimelineProps from './VerticalTimeline';
 import 'react-vertical-timeline-component/style.min.css';
 import './style.css';
-import Modal from 'react-modal';
+/* import Modal from 'react-modal';
 
-Modal.setAppElement('#yourAppElement');
+Modal.setAppElement('#yourAppElement'); */
 
 /* const customStyles = {
     content: {
