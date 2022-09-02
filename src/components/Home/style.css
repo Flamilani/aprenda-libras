@@ -12,7 +12,7 @@
 
 .cardApp img {
     border-radius: 10px;
-    border: 2px solid #607d8b;
+    border: 3px solid #3f51b5;
     width: 140px;
     height: auto;
 }
@@ -26,4 +26,13 @@
     width: 100%;
     max-width: 630px;
     margin: 0 auto;
+}
+
+.breve {
+    text-align: center;
+    margin: 20px;
+}
+
+.breve li {
+    list-style-type: none;
 }

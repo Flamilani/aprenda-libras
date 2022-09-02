@@ -36,7 +36,13 @@ body {
 }
 
 article {
-    min-height: calc(100vh - 40px);
+    min-height: calc(100vh - 43px);
+}
+
+@media only screen and (max-width: 360px) {
+   article {
+      min-height: calc(100vh - 59px);
+  }
 }
 
 main {
@@ -126,4 +132,19 @@ a:active {
     padding: 10px;
     font-size: 20px;
     width: 100%;
+ }
+
+ .link-button {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   display: inline;
+   margin: 0;
+   padding: 0;
+   color: #3f51b5;
+   font-weight: 900;
+ }
+
+ .link-button:hover {
+   text-decoration: underline;
  }

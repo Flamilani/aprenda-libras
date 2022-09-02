@@ -54,3 +54,39 @@
     font-weight: bold !important;
     line-height: 1;
 }
+
+.positionIcons {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+.positionIcons .buttonIcon {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 7px;
+    padding-bottom: 2px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.positionIcons .buttonIcon:hover {
+    transition: 0.5s;
+    filter: brightness(80%);
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
