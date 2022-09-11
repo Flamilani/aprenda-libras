@@ -25,11 +25,3 @@
  .result.number {
     font-size: 8rem;
  }
-
- .formControl {
-    padding: 6px;
-    border-radius: 7px;
-    font-size: 18px;
-    display: flex;
-    float: right;
-}

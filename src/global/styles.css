@@ -47,7 +47,8 @@ article {
 
 main {
     grid-column: 2;
-    padding: 20px;
+    padding: 8px;
+    margin-top: 10px;
 }
 
 footer {
@@ -85,6 +86,13 @@ a:active {
 
 .linkTop {
     font-size: 30px;
+}
+
+.formControl {
+   padding: 4px;
+   border-radius: 6px;
+   font-size: 16px;
+   float: right;
 }
 
 .formGroup {

@@ -5,47 +5,58 @@ import NumbersApp from '../pages/NumbersApp';
 import QuizApp from '../pages/QuizApp/Quiz';
 import GrettingApp from '../pages/GrettingApp';
 import TimelineApp from '../pages/TimelineApp';
-/* import MapsApp from '../pages/MapsApp/MapMundi'; */
+import AlphabetApp from '../pages/AlphabetApp';
+import DetailApp from '../pages/AlphabetApp/detail';
 
 function RouteApp() {
     return (
         <Routes>
-            <Route 
+            <Route
                 path="/"
                 element={<Home />}
                 exact
             ></Route>
-            <Route 
+            <Route
+                path="/alfabeto"
+                element={<AlphabetApp />}
+                exact
+            ></Route>
+            <Route
+                path="/alfabeto/:id"
+                element={<DetailApp />}
+                exact
+            ></Route>
+            <Route
                 path="/nomes"
                 element={<NamesApp />}
                 exact
             >
             </Route>
-            <Route 
+            <Route
                 path="/numeros"
                 element={<NumbersApp />}
                 exact
             >
             </Route>
-            <Route 
+            <Route
                 path="/saudacoes"
                 element={<GrettingApp />}
                 exact
             >
             </Route>
-            <Route 
+            <Route
                 path="/linhadetempo"
                 element={<TimelineApp />}
                 exact
             >
             </Route>
-            <Route 
+            <Route
                 path="/quiz"
                 element={<QuizApp />}
                 exact
             >
             </Route>
-{/*             <Route 
+            {/*             <Route 
                 path="/mapa"
                 element={<MapsApp />}
                 exact
