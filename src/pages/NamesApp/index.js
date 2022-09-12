@@ -38,7 +38,7 @@ class NamesApp extends React.Component {
                             onChange={this.handleChange}
                             autoComplete="off"
                         />
-                       <span className="subtitle">Após o nome digitado, será exibido abaixo</span>
+                       
                     </div>
 
                     <div className="formGroup">
@@ -58,8 +58,17 @@ class NamesApp extends React.Component {
                         </select>
                         <label>Meu nome em Libras</label>
                         {
+                            !this.state.name && this.state.showOption === "a" &&
+                            <p className="result inicial">
+                             Após o nome digitado, seu nome em Libras aparece aqui                    
+                            </p>
+                        }
+                        {
                             this.state.name && this.state.showOption === "a" &&
-                            <p className="result fontLibrasA">{removeAcento(this.state.name)}</p>
+                            <p className="result fontLibrasA">
+                                {removeAcento(this.state.name)}
+                            
+                            </p>
                         }
                         {
                             this.state.name && this.state.showOption === "b" &&

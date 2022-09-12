@@ -3,25 +3,25 @@ import { Breadcrumb } from '../../components/Breadcrumb';
 import { Alphabet } from "./alphabet.constant";
 import LetterProps from "./Letter";
 
-const AlphabetApp = () => {
+class AlphabetApp extends React.Component {
 
-  const state = {
+  state = {
     name: Alphabet.letter,
     showOption: "a"
   }
 
-  const handleOptionChange = (e) => {
+  handleOptionChange = (e) => {
     this.setState({
       showOption: e.target.value
     })
     console.log(e.target.value)
   }
-
+  render(){
     return (
       <>
         <Breadcrumb title="Alfabeto Manual" styles="sectionTop"></Breadcrumb>
         <div className="formGroup">
-          <select className="formControl" onChange={handleOptionChange}>
+          <select className="formControl" onChange={this.handleOptionChange}>
             <option value="a">
               Fonte 1
             </option>
@@ -38,27 +38,29 @@ const AlphabetApp = () => {
           <label>em Libras</label>
 
           {
-            state.showOption === "a" &&
+            this.state.showOption === "a" &&
             <p className="result fontLibrasA">
               <LetterProps />
             </p>
           }
           {
-            state.showOption === "b" &&
-            <p className="result fontLibrasB">{state.name}</p>
+            this.state.showOption === "b" &&
+            <p className="result fontLibrasB">{this.state.name}</p>
           }
           {
-            state.showOption === "c" &&
-            <p className="result fontLibrasC">{state.name}</p>
+            this.state.showOption === "c" &&
+            <p className="result fontLibrasC">{this.state.name}</p>
           }
           {
-            state.showOption === "d" &&
-            <p className="result fontLibrasD">{state.name}</p>
+            this.state.showOption === "d" &&
+            <p className="result fontLibrasD">{this.state.name}</p>
           }
 
         </div>
       </>
     );
+  }
+
   }
 
 export default AlphabetApp;

@@ -27,6 +27,11 @@
  .inputCamp.name {
     text-transform: uppercase;
  }
+
+ .result.inicial {
+    font-size: 18px;
+    padding-top: 10px;
+ }
  
 .btnDownload {
     border: none;
