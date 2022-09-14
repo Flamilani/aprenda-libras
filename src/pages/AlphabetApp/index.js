@@ -1,66 +1,42 @@
-import React from "react"
+import React, { Fragment, useState } from "react"
 import { Breadcrumb } from '../../components/Breadcrumb';
-import { Alphabet } from "./alphabet.constant";
+import { Options } from "../../shared/constants/options.constant";
 import LetterProps from "./Letter";
 
-class AlphabetApp extends React.Component {
+const AlphabetApp = () => {
 
-  state = {
-    name: Alphabet.letter,
-    showOption: "a"
+  const options = Options;
+
+  const [selected, setSelected] = useState(options[0].value);
+
+  const handleOptionChange = e => {
+    console.log(e.target.value);
+    setSelected(e.target.value);
   }
 
-  handleOptionChange = (e) => {
-    this.setState({
-      showOption: e.target.value
-    })
-    console.log(e.target.value)
-  }
-  render(){
-    return (
-      <>
-        <Breadcrumb title="Alfabeto Manual" styles="sectionTop"></Breadcrumb>
-        <div className="formGroup">
-          <select className="formControl" onChange={this.handleOptionChange}>
-            <option value="a">
-              Fonte 1
+  return (
+    <Fragment>
+      <Breadcrumb title="Alfabeto Manual" styles="sectionTop"></Breadcrumb>
+      <div className="formGroup">
+        <select className="formControl" value={selected} onChange={handleOptionChange}>
+          {options.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.text}
             </option>
-            <option value="b">
-              Fonte 2
-            </option>
-            <option value="c">
-              Fonte 3
-            </option>
-            <option value="d">
-              Fonte 4
-            </option>
-          </select>
-          <label>em Libras</label>
+          ))}
+        </select>
 
-          {
-            this.state.showOption === "a" &&
-            <p className="result fontLibrasA">
-              <LetterProps />
-            </p>
-          }
-          {
-            this.state.showOption === "b" &&
-            <p className="result fontLibrasB">{this.state.name}</p>
-          }
-          {
-            this.state.showOption === "c" &&
-            <p className="result fontLibrasC">{this.state.name}</p>
-          }
-          {
-            this.state.showOption === "d" &&
-            <p className="result fontLibrasD">{this.state.name}</p>
-          }
+        <label>em Libras</label>
 
-        </div>
-      </>
-    );
-  }
-
-  }
+        {options.map(option => (
+          selected === option.value &&
+          <p onChange={handleOptionChange} key={option.value} className={`result ${option.style}`}>
+            <LetterProps />
+          </p>
+        ))}
+      </div>
+    </Fragment>
+  );
+}
 
 export default AlphabetApp;

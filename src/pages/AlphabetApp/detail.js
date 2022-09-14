@@ -1,69 +1,49 @@
-import React from "react"
+import React, { Fragment, useState } from "react"
 import { Breadcrumb } from '../../components/Breadcrumb';
-import { Alphabet } from "./alphabet.constant";
+import { Alphabet } from "../../shared/constants/alphabet.constant";
 import { useParams } from "react-router-dom";
-import LetterDetail from "./LetterDetail";
-import { Fragment } from "react";
+import { Options } from "../../shared/constants/options.constant";
+
+import './style.css';
 
 const DetailApp = () => {
+
   const params = useParams();
-  const quote = Alphabet.letter.find((quote) => quote.id === params.id);
+  const quote = Alphabet.find((quote) => quote.id === params.id);
 
-  const state = {
-    name: Alphabet.letter,
-    showOption: "a",    
+  const options = Options;
+
+  const [selected, setSelected] = useState(options[0].value);
+
+  const handleOptionChange = e => {
+    console.log(e.target.value);
+    setSelected(e.target.value);
   }
 
-  const handleOptionChange = (e) => {
-    this.setState({
-      showOption: e.target.value
-    })
-  }
-
-
-    return (
-      <Fragment>
-        <Breadcrumb title="Alfabeto Manual" styles="sectionTop"></Breadcrumb>
-        <div className="formGroup">
-          <select className="formControl" onChange={handleOptionChange}>
-            <option value="a">
-              Fonte 1
+  return (
+    <Fragment>
+      <Breadcrumb title="Alfabeto Manual" styles="sectionTop"></Breadcrumb>
+      <div className="formGroup">
+      <select className="formControl" value={selected} onChange={handleOptionChange}>
+          {options.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.text}
             </option>
-            <option value="b">
-              Fonte 2
-            </option>
-            <option value="c">
-              Fonte 3
-            </option>
-            <option value="d">
-              Fonte 4
-            </option>
-          </select>
-          <label>em Libras</label>
-
-          {
-            state.showOption === "a" &&
-            <p className="result fontLibrasA">
-              <LetterDetail list={quote.letter} />
-            </p>
-          }
-          {
-            state.showOption === "b" &&
-            <p className="result fontLibrasB">{state.name}</p>
-          }
-          {
-            state.showOption === "c" &&
-            <p className="result fontLibrasC">{state.name}</p>
-          }
-          {
-            state.showOption === "d" &&
-            <p className="result fontLibrasD">{state.name}</p>
-          }
-
-        </div>
-      </Fragment>
-    );
-  }
+          ))}
+        </select>
+        
+        <label>em Libras</label>
+            
+        {options.map(option => (
+          selected === option.value &&
+          <p onChange={handleOptionChange} key={option.value} className={`result detail ${option.style}`}>
+            {quote.letter}
+          </p>
+        ))}
+      </div>
+    </Fragment>
+  );
+}
 
 
 

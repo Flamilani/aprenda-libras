@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Breadcrumb } from '../../components/Breadcrumb';
 import Question from './Question';
 import Answer from './Answer';
-import { StateQuestions } from './state-questions.constant';
+import { StateQuestions } from '../../shared/constants/state-questions.constant';
 import './style.css';
 
 export default class Quiz extends Component {

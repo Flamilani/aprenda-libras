@@ -1,6 +1,6 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { Timeline } from './timeline.constant';
+import { Timeline } from '../../shared/constants/timeline.constant';
 import Modal from 'react-modal';
 import ReactTooltip from 'react-tooltip';
 import YouTube from 'react-youtube';

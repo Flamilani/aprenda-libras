@@ -1,96 +1,73 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React from 'react';
+import React, { Fragment, useState } from "react"
 import { Breadcrumb } from '../../components/Breadcrumb';
+import { Options } from "../../shared/constants/options.constant";
 import { removeAcento } from '../../utils/helper';
 
 import './style.css';
 
-class NamesApp extends React.Component {
+const NamesApp = () => {
 
-    state = {
-        name: "",
-        showOption: "a"
+    const [name, setName] = useState('');
+
+    const options = Options;
+    const [selected, setSelected] = useState(options[0].value);
+
+    const handleChange = (e) => {
+        console.log(e.target.value);
+        setName(e.target.value);
     }
 
-    handleChange = (e) => {
-        this.setState({
-            name: e.target.value
-        })
+    const handleOptionChange = e => {
+        console.log(e.target.value);
+        setSelected(e.target.value);
     }
 
-    handleOptionChange = (e) => {
-        this.setState({
-            showOption: e.target.value
-        })
-        console.log(e.target.value)
-    }
 
-    render() {
-        return (
-            <>
-                <section>
-                    <Breadcrumb title="Nomes" styles="sectionTop"></Breadcrumb>
-                    <div className="formGroup">
-                        <label htmlFor="name">Seu nome</label>
-                        <input
-                            className="inputCamp name" id="name" type="text"
-                            placeholder='Digite seu nome aqui'
-                            onChange={this.handleChange}
-                            autoComplete="off"
-                        />
-                       
-                    </div>
+    return (
+        <Fragment>
+            <section>
+                <Breadcrumb title="Nomes" styles="sectionTop"></Breadcrumb>
+                <div className="formGroup">
+                    <label htmlFor="name">Seu nome</label>
+                    <input
+                        className="inputCamp name" id="name" type="text"
+                        placeholder='Digite seu nome aqui'
+                        onChange={handleChange}
+                        autoComplete="off"
+                    />
 
-                    <div className="formGroup">
-                        <select disabled={this.state.name === ''} className="formControl" onChange={this.handleOptionChange}>
-                            <option value="a">
-                                Fonte 1
+                </div>
+
+                <div className="formGroup">
+                    <select disabled={name === ''} className="formControl" value={selected} onChange={handleOptionChange}>
+                        {options.map(option => (
+                            <option key={option.value} value={option.value}>
+                                {option.text}
                             </option>
-                            <option value="b">
-                                Fonte 2
-                            </option>
-                            <option value="c">
-                                Fonte 3
-                            </option>
-                            <option value="d">
-                                Fonte 4
-                            </option>
-                        </select>
-                        <label>Meu nome em Libras</label>
-                        {
-                            !this.state.name && this.state.showOption === "a" &&
-                            <p className="result inicial">
-                             Após o nome digitado, seu nome em Libras aparece aqui                    
-                            </p>
-                        }
-                        {
-                            this.state.name && this.state.showOption === "a" &&
-                            <p className="result fontLibrasA">
-                                {removeAcento(this.state.name)}
-                            
-                            </p>
-                        }
-                        {
-                            this.state.name && this.state.showOption === "b" &&
-                            <p className="result fontLibrasB">{removeAcento(this.state.name)}</p>
-                        }
-                        {
-                            this.state.name && this.state.showOption === "c" &&
-                            <p className="result fontLibrasC">{removeAcento(this.state.name)}</p>
-                        }
-                        {
-                            this.state.name && this.state.showOption === "d" &&
-                            <p className="result fontLibrasD">{removeAcento(this.state.name)}</p>
-                        }
-                        {/* <button onClick="{}" className="btnDownload">Baixar imagem em jpg</button> */}
+                        ))}
+                    </select>
+                    <label>Meu nome em Libras</label>
 
-                    </div>
+                    {options.map(option => (
+                        !name && selected === option.value &&
+                        <p onChange={handleOptionChange} key={option.value} className="result inicial">
+                            Após o nome digitado, seu nome em Libras aparece aqui
+                        </p>
+                    ))}
+                    {options.map(option => (
+                        name && selected === option.value &&
+                        <p onChange={handleOptionChange} key={option.value} className={`result ${option.style}`}>
+                            {removeAcento(name)}
+                        </p>
+                    ))}
+                    {/* <button onClick="{}" className="btnDownload">Baixar imagem em jpg</button> */}
+                </div>
 
 
-                </section>
-            </>
-        )
-    }
+            </section>
+        </Fragment>
+    )
 }
 
 export default NamesApp; 
