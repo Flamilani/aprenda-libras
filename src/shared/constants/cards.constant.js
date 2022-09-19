@@ -6,11 +6,11 @@ import capa04 from '../../assets/imgs/linha-tempo.png';
 import capa05 from '../../assets/imgs/quiz.png';
 
 export const Cards = [
-    {
+/*     {
         link: "/apresentacao",
         title: "Apresentação",
         image: alfabeto,
-    },
+    }, */
     {
         link: "/alfabeto",
         title: "Alfabeto",
