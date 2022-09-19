@@ -21,6 +21,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-simple-maps": "^3.0.0",
+    "react-speech": "^1.0.2",
     "react-tooltip": "^4.2.21",
     "react-vertical-timeline-component": "^3.5.2",
     "react-youtube": "^9.0.3",

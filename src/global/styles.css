@@ -35,7 +35,7 @@ body {
     min-height: 100vh;
 }
 
-article {
+main {
     min-height: calc(100vh - 43px);
 }
 
@@ -43,12 +43,6 @@ article {
    article {
       min-height: calc(100vh - 59px);
   }
-}
-
-main {
-    grid-column: 2;
-    padding: 8px;
-    margin-top: 10px;
 }
 
 footer {

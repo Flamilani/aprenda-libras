@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cards } from './cards.constant';
+import { Cards } from '../../shared/constants/cards.constant';
 import './style.css';
 
 function Home() {

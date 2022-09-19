@@ -8,9 +8,9 @@ function Footer() {
         <footer>
             Desenvolvido por Flavio Milani | 2022 | <span> Feito em ReactJS <FaReact /> |
                 <a href="https://www.linkedin.com/in/flavio-milani/" target="_blank" rel="noreferrer">
-                <img className="icone" src={logo} alt="LinkedIn Flavio Milani" />
-            </a></span> 
-         
+                    <img className="icone" src={logo} alt="LinkedIn Flavio Milani" />
+                </a>
+            </span>
         </footer>
     )
 }

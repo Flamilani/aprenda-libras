@@ -1,30 +1,23 @@
-import React from "react"
-import Reveal from 'reveal.js';
-import './../../../node_modules/reveal.js/dist/reveal.css';
-import './style.css';
+import React, { Fragment } from "react"
+import { Breadcrumb } from '../../components/Breadcrumb';
+import { Link } from 'react-router-dom';
 
 function SlidesApp() {
 
-    React.useEffect(() => {
-        let deck = new Reveal({
-            backgroundTransition: 'slide',
-            transition: 'slide'
-         })
-         deck.initialize();
-         console.log('initialized fool');
-    },[]);
-
     return (
-            <div className="reveal">
-                <div className="slides">
-                    <section>Slide 1</section>
-                    <section>Slide 2</section>
+        <Fragment>
+            <section>
+                <Breadcrumb title="Apresentação" styles="sectionTop"></Breadcrumb>
+                <div className="formGroup">
+                    <ul>
+                        <li>
+                        <Link target="_blank" to="/apresentacao/introducao">Introdução à Libras</Link>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </section>
+        </Fragment>
     );
 }
-
-
-
 
 export default SlidesApp;

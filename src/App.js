@@ -1,20 +1,21 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
+import React, { Fragment } from 'react';
 import RouteApp from './routes/routes';
+import ShowHeader from './shared/locations/ShowHeader';
+import ShowFooter from './shared/locations/ShowFooter';
 
 import './global/styles.css';
 
 function App() {
   return (
-    <>
-      <article>
-        <Header />
-        <main>
+    <Fragment>
+      <main>
+         <ShowHeader />
+        <article>
           <RouteApp />
-        </main>
-      </article>
-      <Footer />
-    </>
+        </article>
+      </main>
+        <ShowFooter />
+    </Fragment>
   );
 }
 

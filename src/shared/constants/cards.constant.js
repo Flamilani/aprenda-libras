@@ -7,8 +7,8 @@ import capa05 from '../../assets/imgs/quiz.png';
 
 export const Cards = [
     {
-        link: "/introducao",
-        title: "Introdução à Libras",
+        link: "/apresentacao",
+        title: "Apresentação",
         image: alfabeto,
     },
     {

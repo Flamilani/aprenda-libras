@@ -1,83 +1,63 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import { Breadcrumb } from '../../components/Breadcrumb';
+import { Options } from "../../shared/constants/options.constant";
 
 import './style.css';
 
-class SecondApp extends React.Component {
-    state = {
-        number: "",
-        showOption: "a"
+const NumberApp = () => {
+    const [number, setNumber] = useState('');
+
+    const options = Options;
+    const [selected, setSelected] = useState(options[0].value);
+
+    const handleChange = (e) => {
+        console.log(e.target.value);
+        setNumber(e.target.value);
     }
 
-    handleChange = (e) => {
-        this.setState({
-            number: e.target.value
-        })
+    const handleOptionChange = e => {
+        console.log(e.target.value);
+        setSelected(e.target.value);
     }
 
-    handleOptionChange = (e) => {
-        this.setState({
-            showOption: e.target.value
-        })
-        console.log(e.target.value)
-    }
-
-    render() {
-        
-        return (
-            <>
-                <form autoComplete="off">
+    return (
+        <Fragment>
+            <section>
                 <Breadcrumb title="Números" styles="sectionTop"></Breadcrumb>
+                <div className="formGroup number">
+                    <label htmlFor="number">Número</label>
+                    <input
+                        className="inputCamp number" id="number" type="number"
+                        placeholder='Digite qualquer número'
+                        pattern="[0-9]*"
+                        onChange={handleChange}
+                        autoComplete="off"
+                    />
+                </div>
+                {
+                    number &&
                     <div className="formGroup number">
-                        <label htmlFor="number">Número</label>
-                        <input
-                            className="inputCamp number" id="number" type="number"
-                            placeholder='Digite qualquer número'
-                            pattern="[0-9]*"
-                            onChange={this.handleChange}
-                        />
+                        <select disabled={number === ''} className="formControl" value={selected} onChange={handleOptionChange}>
+                            {options.map(option => (
+                                <option key={option.value} value={option.value}>
+                                    {option.text}
+                                </option>
+                            ))}
+                        </select>
+                        <label>Número em Libras</label>
+                        
+                        {options.map(option => (
+                            number && selected === option.value &&
+                            <p onChange={handleOptionChange} key={option.value} className={`result number ${option.style}`}>
+                                {number}
+                            </p>
+                        ))}
                     </div>
-                    {
-                        this.state.number &&
-                        <div className="formGroup number">
-                        <select className="formControl" onChange={this.handleOptionChange}>
-                                <option value="a">
-                                    Fonte 1
-                                </option>
-                                <option value="b">
-                                    Fonte 2
-                                </option>
-                                <option value="c">
-                                    Fonte 3
-                                </option>
-                                <option value="d">
-                                    Fonte 4
-                                </option>
-                            </select>
-                            <label>Número em Libras</label>
-                            {
-                                this.state.showOption === "a" &&
-                                <p className="result number fontLibrasA">{this.state.number}</p>
-                            }
-                            {
-                                this.state.showOption === "b" &&
-                                <p className="result number fontLibrasB">{this.state.number}</p>
-                            }
-                            {
-                                this.state.showOption === "c" &&
-                                <p className="result number fontLibrasC">{this.state.number}</p>
-                            }
-                            {
-                                this.state.showOption === "d" &&
-                                <p className="result number fontLibrasD">{this.state.number}</p>
-                            }
-                        </div>
-                    }
+                }
 
-                </form>
-            </>
-        )
-    }
+            </section>
+        </Fragment>
+    )
 }
 
-export default SecondApp; 
+export default NumberApp; 

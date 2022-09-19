@@ -7,3 +7,9 @@ export function removeAcento(text) {
     text = text.replace(new RegExp('[ÚÙÛÜ]', 'gi'), 'u');
     return text;
 }
+
+export function removeHTML(str) {
+    var tmp = document.createElement("DIV");
+    tmp.innerHTML = str;
+    return tmp.textContent || tmp.innerText || "";
+}

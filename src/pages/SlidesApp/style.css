@@ -3,5 +3,6 @@
 }
 
 .slides {
-    font-size: 5rem;
+    inset: 0 !important;
+    transform: none !important;
 }

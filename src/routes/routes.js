@@ -8,6 +8,7 @@ import TimelineApp from '../pages/TimelineApp';
 import AlphabetApp from '../pages/AlphabetApp';
 import DetailApp from '../pages/AlphabetApp/detail';
 import SlidesApp from '../pages/SlidesApp';
+import Slide01 from '../pages/SlidesApp/Slide01';
 
 function RouteApp() {
     return (
@@ -17,8 +18,12 @@ function RouteApp() {
                 element={<Home />}
             ></Route>
             <Route
-                path="/introducao"
+                path="/apresentacao"
                 element={<SlidesApp />}
+            ></Route>
+            <Route
+                path="/apresentacao/introducao"
+                element={<Slide01 />}
             ></Route>
             <Route
                 path="/alfabeto"
@@ -53,19 +58,8 @@ function RouteApp() {
                 element={<QuizApp />}
             >
             </Route>
-            {/*             <Route 
-                path="/mapa"
-                element={<MapsApp />}
-                exact
-            >
-            </Route>
-            <Route 
-                path="/mapa-brasil"
-                element={<MapsBrazilApp />}
-                exact
-            >
-            </Route> */}
-        </Routes>)
+        </Routes>
+    )
 }
 
 export default RouteApp; 
