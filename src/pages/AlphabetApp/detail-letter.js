@@ -1,13 +1,13 @@
 import React, { Fragment, useState } from "react"
 import { Breadcrumb } from '../../components/Breadcrumb';
-import { Link } from 'react-router-dom';
 import { Alphabet } from "../../shared/constants/alphabet.constant";
+import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { Options } from "../../shared/constants/options.constant";
 
 import './style.css';
 
-const DetailApp = () => {
+const DetailLetterApp = () => {
 
   const params = useParams();
   const quote = Alphabet.find((quote) => quote.id === params.id);
@@ -23,29 +23,21 @@ const DetailApp = () => {
 
   return (
     <Fragment>
-      <Breadcrumb title="Datilologia" styles="sectionTop" link="/datilologia"></Breadcrumb>
+      <Breadcrumb title="Alfabeto em Português" styles="sectionTop" link="/alfabeto"></Breadcrumb>
       <div className="option-letter spaceBottom">
+        <Link to={`/datilologia/${quote.id}`}>
           <span className="fontLibrasA fontSizeA">
             ABC
           </span>
-          <Link to={`/alfabeto/${quote.id}`}>
-            <span className="fontSizeB">
-              ABC
-            </span>
-          </Link>
-        </div>
-      <div className="formGroup spaceBottom">
-        <select className="formControl optionFonts" value={selected} onChange={handleOptionChange}>
-          {options.map(option => (
-            <option key={option.value} value={option.value}>
-              {option.text}
-            </option>
-          ))}
-        </select>
-
+        </Link>
+        <span className="fontSizeB">
+          ABC
+        </span>
+      </div>
+      <div className="formGroup"> 
         {options.map(option => (
           selected === option.value &&
-          <p onChange={handleOptionChange} key={option.value} className={`result detail ${option.style}`}>
+          <p onChange={handleOptionChange} key={option.value} className="result detail">
             {quote.letter}
           </p>
         ))}
@@ -57,4 +49,4 @@ const DetailApp = () => {
 
 
 
-export default DetailApp;
+export default DetailLetterApp;

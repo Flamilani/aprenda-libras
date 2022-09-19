@@ -23,7 +23,7 @@ const NumberApp = () => {
     return (
         <Fragment>
             <section>
-                <Breadcrumb title="Números" styles="sectionTop"></Breadcrumb>
+                <Breadcrumb title="Números" styles="sectionTop" link="/"></Breadcrumb>
                 <div className="formGroup number">
                     <label htmlFor="number">Número</label>
                     <input

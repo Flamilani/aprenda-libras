@@ -26,8 +26,7 @@ const NamesApp = () => {
 
     return (
         <Fragment>
-            <section>
-                <Breadcrumb title="Nomes" styles="sectionTop"></Breadcrumb>
+                <Breadcrumb title="Nomes" styles="sectionTop" link="/"></Breadcrumb>
                 <div className="formGroup">
                     <label htmlFor="name">Seu nome</label>
                     <input
@@ -63,9 +62,6 @@ const NamesApp = () => {
                     ))}
                     {/* <button onClick="{}" className="btnDownload">Baixar imagem em jpg</button> */}
                 </div>
-
-
-            </section>
         </Fragment>
     )
 }

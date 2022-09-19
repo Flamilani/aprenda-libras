@@ -1,4 +1,4 @@
-import alfabeto from '../../assets/imgs/alfabeto-manual.png';
+import datilologia from '../../assets/imgs/alfabeto-manual.png';
 import capa01 from '../../assets/imgs/capa01.png';
 import capa02 from '../../assets/imgs/numeros.png';
 import capa03 from '../../assets/imgs/saudacoes.png';
@@ -12,9 +12,9 @@ export const Cards = [
         image: alfabeto,
     }, */
     {
-        link: "/alfabeto",
-        title: "Alfabeto",
-        image: alfabeto,
+        link: "/datilologia",
+        title: "Datilologia",
+        image: datilologia,
     },
     {
         link: "/nomes",

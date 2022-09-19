@@ -48,7 +48,7 @@ export default class Quiz extends Component {
         }
         return(
             <aside className="quiz">
-            <Breadcrumb title="Quiz" styles="sectionTop"></Breadcrumb>
+            <Breadcrumb title="Quiz" styles="sectionTop" link="/"></Breadcrumb>
             <div className="Content">
                 {step <= Object.keys(questions).length ? 
                     (<>

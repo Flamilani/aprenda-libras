@@ -45,6 +45,12 @@ main {
   }
 }
 
+@media only screen and (max-width: 412px) {
+   article .sectionTop {
+      padding-left: 15px;
+  }
+}
+
 footer {
     align-self: end;
     grid-column: 2;
@@ -69,6 +75,7 @@ a:active {
 .sectionTop {
     width: 100%;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 .sectionTop span {
@@ -149,4 +156,28 @@ a:active {
 
  .link-button:hover {
    text-decoration: underline;
+ }
+
+ .option-letter {
+   display: flex;
+   justify-content: center;
+ }
+
+ .option-letter span {
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px;
+ }
+
+ .option-letter .fontSizeA {
+   font-size: 45px;
+   margin-top: 20px;
+   padding-top: 10px;
+ }
+
+ .option-letter .fontSizeB {
+   font-size: 35px;
+    padding: 10px;
+    margin-left: 10px;
  }

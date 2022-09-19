@@ -10,25 +10,25 @@
 }
 
 .header h1 {
-    font-size: 30px;
-    margin-top: 30px;
+    font-size: 21px;
+    margin-top: 15px;
     margin-left: 10px;
 }
 
 .header h1 span {
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 5px;
 }
 
 .header .logo {
-    width: 125px;
+    width: 80px;
     height: 100%;
     filter: brightness(300%);
 }
 
 .header .retrato {
-    width: 100px;
+    width: 65px;
     height: 100%;
     margin-left: 15px;
 }

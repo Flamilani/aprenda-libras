@@ -6,7 +6,7 @@ import './style.css';
 function TimelineApp() {
     return (
         <aside>
-            <Breadcrumb title="Linha de Tempo" styles="sectionTop"></Breadcrumb>
+            <Breadcrumb title="Linha de Tempo" styles="sectionTop" link="/"></Breadcrumb>
             <TimelineProps />
         </aside>
     )

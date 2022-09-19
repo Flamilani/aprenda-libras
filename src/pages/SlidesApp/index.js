@@ -7,7 +7,7 @@ function SlidesApp() {
     return (
         <Fragment>
             <section>
-                <Breadcrumb title="Apresentação" styles="sectionTop"></Breadcrumb>
+                <Breadcrumb title="Apresentação" styles="sectionTop" link="/"></Breadcrumb>
                 <div className="formGroup">
                     <ul>
                         <li>

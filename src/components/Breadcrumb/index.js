@@ -4,7 +4,7 @@ import { BsArrowLeftSquareFill } from 'react-icons/bs';
 export function Breadcrumb(props) {
     return (
         <div className={props.styles}>
-            <Link className="linkTop" to="/">
+            <Link className="linkTop" to={props.link}>
                 <BsArrowLeftSquareFill />
             </Link>
             <span>{props.title}</span>

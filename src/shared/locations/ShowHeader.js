@@ -6,7 +6,7 @@ function ShowHeader() {
   
     return (
       <>
-        {location.pathname !== "/apresentacao/introducao" ? <Header /> : ""}
+        {location.pathname === "/" ? <Header /> : ""}
       </>
     );
   }

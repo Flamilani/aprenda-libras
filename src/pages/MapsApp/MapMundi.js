@@ -8,7 +8,7 @@ function MapsApp() {
     const [content, setContent] = useState("");
     return (
       <div className="mapsApp">
-        <Breadcrumb title="Mapa Mundi" styles="sectionTop"></Breadcrumb>
+        <Breadcrumb title="Mapa Mundi" styles="sectionTop" link="/"></Breadcrumb>
         <MapChart setTooltipContent={setContent} />
         <ReactTooltip>{content}</ReactTooltip>
       </div>

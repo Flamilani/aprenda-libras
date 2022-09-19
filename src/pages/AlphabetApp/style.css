@@ -2,3 +2,15 @@
     font-size: 20rem;
     padding: 0px;
 }
+
+.result.letter-alphabet span {
+    padding: 6px;
+}
+
+.formControl.optionFonts {
+    margin-top: -35px;
+}
+
+.formGroup.spaceBottom {
+    margin-top: 25px;
+}

@@ -54,7 +54,7 @@ class ThirdApp extends React.Component {
         return (
             <>
                 <form autoComplete="off">
-                <Breadcrumb title="Saudações" styles="sectionTop greetingTop"></Breadcrumb>
+                <Breadcrumb title="Saudações" styles="sectionTop greetingTop" link="/"></Breadcrumb>
                     <div className="cardGroup greetingGroup">
                         <div onClick={this.handleChangeA} className="cardApp greeting">
                             {

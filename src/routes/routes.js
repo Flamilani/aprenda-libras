@@ -5,10 +5,12 @@ import NumbersApp from '../pages/NumbersApp';
 import QuizApp from '../pages/QuizApp/Quiz';
 import GrettingApp from '../pages/GrettingApp';
 import TimelineApp from '../pages/TimelineApp';
-import AlphabetApp from '../pages/AlphabetApp';
+import FingerspellingApp from '../pages/AlphabetApp';
+import AlphabetApp from '../pages/AlphabetApp/alphabet';
 import DetailApp from '../pages/AlphabetApp/detail';
 import SlidesApp from '../pages/SlidesApp';
 import Slide01 from '../pages/SlidesApp/Slide01';
+import DetailLetterApp from '../pages/AlphabetApp/detail-letter';
 
 function RouteApp() {
     return (
@@ -26,12 +28,20 @@ function RouteApp() {
                 element={<Slide01 />}
             ></Route>
             <Route
+                path="/datilologia"
+                element={<FingerspellingApp />}
+            ></Route>
+            <Route
+                path="/datilologia/:id"
+                element={<DetailApp />}
+            ></Route>
+                        <Route
                 path="/alfabeto"
                 element={<AlphabetApp />}
             ></Route>
             <Route
                 path="/alfabeto/:id"
-                element={<DetailApp />}
+                element={<DetailLetterApp />}
             ></Route>
             <Route
                 path="/nomes"

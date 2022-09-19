@@ -4,6 +4,7 @@
 
 .sectionTop.greetingTop {
     max-width: 700px;
+    padding-left: 15px;
 }
 
 .cardApp.greeting img {
