@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { Fragment, useState } from "react"
+import React, { useState, useRef } from "react"
+import * as htmlToImage from 'html-to-image';
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { Options } from "../../shared/constants/options.constant";
 import { removeAcento } from '../../utils/helper';
@@ -7,6 +8,18 @@ import { removeAcento } from '../../utils/helper';
 import './style.css';
 
 const NamesApp = () => {
+
+    const domEl = useRef(null);
+
+    const downloadImage = async () => {
+        const dataUrl = await htmlToImage.toPng(domEl.current);
+
+        // download image
+        const link = document.createElement('a');
+        link.download = "html-to-img.png";
+        link.href = dataUrl;
+        link.click();
+    }
 
     const [name, setName] = useState('');
 
@@ -25,44 +38,56 @@ const NamesApp = () => {
 
 
     return (
-        <Fragment>
-                <Breadcrumb title="Nomes" styles="sectionTop" link="/"></Breadcrumb>
-                <div className="formGroup">
-                    <label htmlFor="name">Seu nome</label>
-                    <input
-                        className="inputCamp name" id="name" type="text"
-                        placeholder='Digite seu nome aqui'
-                        onChange={handleChange}
-                        autoComplete="off"
-                    />
+        <>
+            <Breadcrumb title="Nomes" styles="sectionTop" link="/"></Breadcrumb>
+            <div className="formGroup">
+                <label htmlFor="name">Seu nome</label>
+                <input
+                    className="inputCamp name" id="name" type="text"
+                    placeholder='Digite seu nome aqui'
+                    onChange={handleChange}
+                    autoComplete="off"
+                />
 
-                </div>
+            </div>
 
-                <div className="formGroup">
-                    <select disabled={name === ''} className="formControl" value={selected} onChange={handleOptionChange}>
-                        {options.map(option => (
-                            <option key={option.value} value={option.value}>
-                                {option.text}
-                            </option>
-                        ))}
-                    </select>
-                    <label>Meu nome em Libras</label>
-
+            <div className="formGroup">
+                <select disabled={name === ''} className="formControl" value={selected} onChange={handleOptionChange}>
                     {options.map(option => (
-                        !name && selected === option.value &&
-                        <p onChange={handleOptionChange} key={option.value} className="result inicial">
-                            Após o nome digitado, seu nome em Libras aparece aqui
-                        </p>
+                        <option key={option.value} value={option.value}>
+                            {option.text}
+                        </option>
                     ))}
-                    {options.map(option => (
-                        name && selected === option.value &&
-                        <p onChange={handleOptionChange} key={option.value} className={`result ${option.style}`}>
+                </select>
+                <label>Meu nome em Libras</label>
+
+                {options.map(option => (
+                    !name && selected === option.value &&
+                    <p onChange={handleOptionChange} key={option.value} className="result inicial">
+                        Após o nome digitado, seu nome em Libras aparece aqui
+                    </p>
+                ))}
+                {options.map(option => (
+                    name && selected === option.value &&
+                    <div className="result" id="domEl" ref={domEl}>
+                        <p onChange={handleOptionChange} key={option.value} className={option.style}>
                             {removeAcento(name)}
                         </p>
-                    ))}
-                    {/* <button onClick="{}" className="btnDownload">Baixar imagem em jpg</button> */}
-                </div>
-        </Fragment>
+                        <p className="fonteOriginal" onChange={handleOptionChange} key={option.value}>
+                            {removeAcento(name)}
+                        </p>
+                    </div>
+                ))}
+                {options.map(option => (
+                    name && selected === option.value &&
+                    <div>
+                        <div>
+                            <button onClick={downloadImage} className="btnDownload">Baixar imagem</button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
     )
 }
 

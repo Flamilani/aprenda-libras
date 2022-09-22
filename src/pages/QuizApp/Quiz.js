@@ -48,7 +48,7 @@ export default class Quiz extends Component {
         }
         return(
             <aside className="quiz">
-            <Breadcrumb title="Quiz" styles="sectionTop" link="/"></Breadcrumb>
+            <Breadcrumb title="Quiz" styles="sectionTop" link="/iniciarquiz"></Breadcrumb>
             <div className="Content">
                 {step <= Object.keys(questions).length ? 
                     (<>
@@ -75,7 +75,7 @@ export default class Quiz extends Component {
                             <h1 className="titleFinal">Terminou a Quiz!</h1>
                             <p className="scoreFinal">Seus pontos são: {parseFloat(( score / Object.keys(questions).length) * 100).toFixed(0)}</p>
                             <p className="scorePhase">{scoreResult}</p> 
-                            <Link className="btnPlayAgain" to="/quiz">
+                            <Link className="btnPlayAgain" to="/iniciarquiz">
                             Jogar novamente
                             </Link>                        
                         </div>

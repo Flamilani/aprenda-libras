@@ -19,7 +19,7 @@ const FingerspellingApp = () => {
     <Fragment>
       <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/"></Breadcrumb>
       <div className="option-letter">
-      <span className="fontLibrasA fontSizeA">
+      <span className="fontLibrasA fontSizeA fontBack">
           ABC
         </span>
         <Link to="/alfabeto">

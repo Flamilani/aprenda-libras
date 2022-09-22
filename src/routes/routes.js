@@ -11,6 +11,7 @@ import DetailApp from '../pages/AlphabetApp/detail';
 import SlidesApp from '../pages/SlidesApp';
 import Slide01 from '../pages/SlidesApp/Slide01';
 import DetailLetterApp from '../pages/AlphabetApp/detail-letter';
+import QuizStartApp from '../pages/QuizApp';
 
 function RouteApp() {
     return (
@@ -61,6 +62,11 @@ function RouteApp() {
             <Route
                 path="/linhadetempo"
                 element={<TimelineApp />}
+            >
+            </Route>
+            <Route
+                path="/iniciarquiz"
+                element={<QuizStartApp />}
             >
             </Route>
             <Route

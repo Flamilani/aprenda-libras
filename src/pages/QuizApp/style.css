@@ -30,6 +30,14 @@
     text-shadow: none;
 }
 
+.formGroup.quizCard {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
 /*  QUESTION  */
 
 .Content h1{

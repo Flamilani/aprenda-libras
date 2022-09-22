@@ -15,30 +15,36 @@ export const Cards = [
         link: "/datilologia",
         title: "Datilologia",
         image: datilologia,
+        level: '',
     },
     {
         link: "/nomes",
         title: "Nomes",
         image: capa01,
+        level: '',
     },
     {
         link: "/numeros",
         title: "Números",
         image: capa02,
+        level: '',
     },
     {
         link: "/saudacoes",
         title: "Saudações",
         image: capa03,
+        level: '',
     },
     {
         link: "/linhadetempo",
         title: "Linha de Tempo",
         image: capa04,
+        level: '',
     },
     {
-        link: "/quiz",
+        link: "/iniciarquiz",
         title: "Quiz",
         image: capa05,
+        level: '',
     },
 ]

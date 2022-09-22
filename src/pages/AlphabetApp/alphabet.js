@@ -14,7 +14,7 @@ const AlphabetApp = () => {
             ABC
           </span>
         </Link>
-        <span className="fontSizeB">
+        <span className="fontSizeB fontBack">
           ABC
         </span>
       </div>

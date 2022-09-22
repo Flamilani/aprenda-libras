@@ -23,7 +23,7 @@ const DetailApp = () => {
 
   return (
     <Fragment>
-      <Breadcrumb title="Datilologia" styles="sectionTop" link="/datilologia"></Breadcrumb>
+      <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/datilologia"></Breadcrumb>
       <div className="option-letter spaceBottom">
           <span className="fontLibrasA fontSizeA">
             ABC

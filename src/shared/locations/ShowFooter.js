@@ -6,7 +6,10 @@ function ShowFooter() {
   
     return (
       <>
-        {location.pathname === "/" ? <Footer /> : ""}
+        { location.pathname !== "/apresentacao/introducao" && location.pathname !== "/" && 
+         <Footer styles="" />}
+        { location.pathname === "/" &&
+         <Footer styles="footerHome" />}
       </>
     );
   }

@@ -32,6 +32,7 @@
     font-size: 18px;
     padding-top: 10px;
     color: #707070;
+    cursor: default;
  }
  
 .btnDownload {
@@ -44,6 +45,16 @@
     margin-left: 0px;
     cursor: pointer;
     font-size: 15px;
+}
+
+.btnDownload:hover {
+    background-color: #00bcd4;
+    color: #3f51b5;
+}
+
+.fonteOriginal {
+    font-size: 35px;
+    text-transform: capitalize;
 }
 
 
