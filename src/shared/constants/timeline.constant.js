@@ -6,9 +6,7 @@ import foto05 from '../../assets/imgs/timeline/e-huet.jpg';
 import foto06 from '../../assets/imgs/timeline/flausino.jpg';
 import { 
     FaAddressBook, 
-    FaWalking,
-    FaFilm,
-    FaRegImage
+    FaWalking
  } from 'react-icons/fa';
 
 export const Timeline = [
