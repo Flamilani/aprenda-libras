@@ -4,7 +4,6 @@ import { Timeline } from '../../shared/constants/timeline.constant';
 import Modal from 'react-modal';
 import ReactTooltip from 'react-tooltip';
 import YouTube from 'react-youtube';
-import LightboxProps from './Lightbox';
 
 Modal.setAppElement('#root');
 
@@ -75,7 +74,6 @@ function TimelineProps() {
                     </>
                 }
             </span>
-            <LightboxProps />
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
