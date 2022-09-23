@@ -27,8 +27,7 @@ export const Timeline = [
         cabeça e outras partes do corpo?"</i></strong></p>,
         image: foto01,
         imgStyle: "imgTimeline",
-        iconPath: [<FaFilm />, <FaRegImage />],
-        tooltip: ["Assistir Vídeo", "Ver Imagem"]
+        iconPath: ""
     },
     {
         id: 2,
@@ -44,8 +43,7 @@ export const Timeline = [
         artes para enseñar a hablar a los mudos"</i></strong>.</p>,
         image: foto02,
         imgStyle: "imgTimeline",
-        iconPath: [<FaRegImage />],
-        tooltip: ["Ver Imagem"]
+        iconPath: ""
     },
     {
         id: 3,
@@ -59,7 +57,7 @@ export const Timeline = [
         em 1620 onde registrou o alfabeto manual.</p>,
         image: foto03,
         imgStyle: "imgTimelineH",
-        iconPath: ''
+        iconPath: ""
     },
     {
         id: 4,
@@ -77,7 +75,7 @@ export const Timeline = [
         </p>,
         image: foto04,
         imgStyle: "imgTimeline",
-        iconPath: ''
+        iconPath: ""
     },
     {
         id: 5,
@@ -93,7 +91,7 @@ export const Timeline = [
         de Educação de Surdos, no dia 26 de setembro de 1857.</p>,
         image: foto05,
         imgStyle: "imgTimeline",
-        iconPath: ''
+        iconPath: ""
     },
     {
         id: 6,
@@ -110,6 +108,6 @@ export const Timeline = [
         Sinais Brasileira, no Brasil.</p>,
         image: foto06,
         imgStyle: "imgTimeline",
-        iconPath: ''
+        iconPath: ""
     }
 ]
