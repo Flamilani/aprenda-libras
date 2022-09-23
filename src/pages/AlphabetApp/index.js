@@ -1,4 +1,5 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment, useState, useRef } from "react"
+import * as htmlToImage from 'html-to-image';
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { Options } from "../../shared/constants/options.constant";
 import { Link } from 'react-router-dom';
@@ -6,12 +7,23 @@ import LetterProps from "./Letter";
 
 const FingerspellingApp = () => {
 
+  const domEl = useRef(null);
+
+  const downloadImage = async () => {
+    const dataUrl = await htmlToImage.toPng(domEl.current);
+
+    // download image
+    const link = document.createElement('a');
+    link.download = "html-to-img.png";
+    link.href = dataUrl;
+    link.click();
+  }
+
   const options = Options;
 
   const [selected, setSelected] = useState(options[0].value);
 
   const handleOptionChange = e => {
-    console.log(e.target.value);
     setSelected(e.target.value);
   }
 
@@ -19,13 +31,13 @@ const FingerspellingApp = () => {
     <Fragment>
       <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/"></Breadcrumb>
       <div className="option-letter">
-      <span className="fontLibrasA fontSizeA fontBack">
+        <span className="fontLibrasA fontSizeA fontBack">
           ABC
         </span>
         <Link to="/alfabeto">
-        <span className="fontSizeB">
-          ABC
-        </span>
+          <span className="fontSizeB">
+            ABC
+          </span>
         </Link>
       </div>
 
@@ -39,11 +51,15 @@ const FingerspellingApp = () => {
         </select>
         {options.map(option => (
           selected === option.value &&
-          <p onChange={handleOptionChange} key={option.value} className={`result ${option.style}`}>
-            <LetterProps />
-          </p>
+          <div key={option.value} id="domEl" ref={domEl}>
+            <p onChange={handleOptionChange} className={`result ${option.style}`}>
+              <LetterProps />
+            </p>
+          </div>
         ))}
+        <button onClick={downloadImage} className="btnDownload">Baixar imagem</button>
       </div>
+
     </Fragment>
   );
 }

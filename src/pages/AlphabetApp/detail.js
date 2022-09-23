@@ -25,7 +25,7 @@ const DetailApp = () => {
     <Fragment>
       <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/datilologia"></Breadcrumb>
       <div className="option-letter spaceBottom">
-          <span className="fontLibrasA fontSizeA">
+          <span className="fontLibrasA fontSizeA fontBack">
             ABC
           </span>
           <Link to={`/alfabeto/${quote.id}`}>

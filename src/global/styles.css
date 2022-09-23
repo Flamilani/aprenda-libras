@@ -185,12 +185,11 @@ a:active {
  .option-letter .fontBack {
    background: #66e5f5;
    color: #3f51b5;
-   font-weight: bold;
    cursor: default;
  }
 
  .option-letter .fontSizeB {
-   font-size: 35px;
+    font-size: 35px;
     padding: 10px;
     margin-left: 10px;
  }

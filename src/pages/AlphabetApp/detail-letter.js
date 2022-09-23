@@ -30,7 +30,7 @@ const DetailLetterApp = () => {
             ABC
           </span>
         </Link>
-        <span className="fontSizeB">
+        <span className="fontSizeB fontBack">
           ABC
         </span>
       </div>

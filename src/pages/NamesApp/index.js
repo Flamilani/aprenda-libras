@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useRef } from "react"
 import * as htmlToImage from 'html-to-image';
 import { Breadcrumb } from '../../components/Breadcrumb';
@@ -43,7 +42,7 @@ const NamesApp = () => {
             <div className="formGroup">
                 <label htmlFor="name">Seu nome</label>
                 <input
-                    className="inputCamp name" id="name" type="text"
+                    className="inputCamp name" type="text"
                     placeholder='Digite seu nome aqui'
                     onChange={handleChange}
                     autoComplete="off"
@@ -60,30 +59,24 @@ const NamesApp = () => {
                     ))}
                 </select>
                 <label>Meu nome em Libras</label>
-
-                {options.map(option => (
-                    !name && selected === option.value &&
-                    <p onChange={handleOptionChange} key={option.value} className="result inicial">
+                {
+                    !name &&
+                    <p onChange={handleOptionChange} className="result inicial">
                         Após o nome digitado, seu nome em Libras aparece aqui
                     </p>
-                ))}
+                }
                 {options.map(option => (
                     name && selected === option.value &&
-                    <div className="result" id="domEl" ref={domEl}>
-                        <p onChange={handleOptionChange} key={option.value} className={option.style}>
-                            {removeAcento(name)}
-                        </p>
-                        <p className="fonteOriginal" onChange={handleOptionChange} key={option.value}>
-                            {removeAcento(name)}
-                        </p>
-                    </div>
-                ))}
-                {options.map(option => (
-                    name && selected === option.value &&
-                    <div>
-                        <div>
-                            <button onClick={downloadImage} className="btnDownload">Baixar imagem</button>
+                    <div onChange={handleOptionChange} key={option.value}>
+                        <div className="result" id="domEl" ref={domEl}>
+                            <p className={option.style}>
+                                {removeAcento(name)}
+                            </p>
+                            <p className="fonteOriginal">
+                                {removeAcento(name)}
+                            </p>
                         </div>
+                        <button onClick={downloadImage} className="btnDownload">Baixar imagem</button>
                     </div>
                 ))}
             </div>
