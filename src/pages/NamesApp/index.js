@@ -3,6 +3,7 @@ import * as htmlToImage from 'html-to-image';
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { Options } from "../../shared/constants/options.constant";
 import { removeAcento } from '../../utils/helper';
+import Slide from 'react-reveal/Slide';
 
 import './style.css';
 
@@ -38,48 +39,50 @@ const NamesApp = () => {
 
     return (
         <>
-            <Breadcrumb title="Nomes" styles="sectionTop" link="/"></Breadcrumb>
-            <div className="formGroup">
-                <label htmlFor="name">Seu nome</label>
-                <input
-                    className="inputCamp name" type="text"
-                    placeholder='Digite seu nome aqui'
-                    onChange={handleChange}
-                    autoComplete="off"
-                />
+            <Slide left>
+                <Breadcrumb title="Nomes" styles="sectionTop" link="/"></Breadcrumb>
+                <div className="formGroup">
+                    <label htmlFor="name">Seu nome</label>
+                    <input
+                        className="inputCamp name" type="text"
+                        placeholder='Digite seu nome aqui'
+                        onChange={handleChange}
+                        autoComplete="off"
+                    />
 
-            </div>
+                </div>
 
-            <div className="formGroup">
-                <select disabled={name === ''} className="formControl" value={selected} onChange={handleOptionChange}>
+                <div className="formGroup">
+                    <select disabled={name === ''} className="formControl" value={selected} onChange={handleOptionChange}>
+                        {options.map(option => (
+                            <option key={option.value} value={option.value}>
+                                {option.text}
+                            </option>
+                        ))}
+                    </select>
+                    <label>Meu nome em Libras</label>
+                    {
+                        !name &&
+                        <p onChange={handleOptionChange} className="result inicial">
+                            Após o nome digitado, seu nome em Libras aparece aqui
+                        </p>
+                    }
                     {options.map(option => (
-                        <option key={option.value} value={option.value}>
-                            {option.text}
-                        </option>
-                    ))}
-                </select>
-                <label>Meu nome em Libras</label>
-                {
-                    !name &&
-                    <p onChange={handleOptionChange} className="result inicial">
-                        Após o nome digitado, seu nome em Libras aparece aqui
-                    </p>
-                }
-                {options.map(option => (
-                    name && selected === option.value &&
-                    <div onChange={handleOptionChange} key={option.value}>
-                        <div className="result" id="domEl" ref={domEl}>
-                            <p className={option.style}>
-                                {removeAcento(name)}
-                            </p>
-                            <p className="fonteOriginal">
-                                {removeAcento(name)}
-                            </p>
+                        name && selected === option.value &&
+                        <div onChange={handleOptionChange} key={option.value}>
+                            <div className="result" id="domEl" ref={domEl}>
+                                <p className={option.style}>
+                                    {removeAcento(name)}
+                                </p>
+                                <p className="fonteOriginal">
+                                    {removeAcento(name)}
+                                </p>
+                            </div>
+                            <button onClick={downloadImage} className="btnDownload">Baixar imagem</button>
                         </div>
-                        <button onClick={downloadImage} className="btnDownload">Baixar imagem</button>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+            </Slide>
         </>
     )
 }

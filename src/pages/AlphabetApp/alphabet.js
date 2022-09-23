@@ -2,11 +2,13 @@ import React, { Fragment } from "react"
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { Link } from 'react-router-dom';
 import LetterProps from "./Letter";
+import Slide from 'react-reveal/Slide';
 
 const AlphabetApp = () => {
 
   return (
     <Fragment>
+      <Slide right>
       <Breadcrumb title="Alfabeto em Português" styles="sectionTop" link="/"></Breadcrumb>
       <div className="option-letter spaceBottom">
         <Link to="/datilologia">
@@ -23,6 +25,7 @@ const AlphabetApp = () => {
           <LetterProps />
         </p>
       </div>
+      </Slide>
     </Fragment>
   );
 }

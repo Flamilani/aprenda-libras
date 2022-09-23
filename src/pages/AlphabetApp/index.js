@@ -4,6 +4,7 @@ import { Breadcrumb } from '../../components/Breadcrumb';
 import { Options } from "../../shared/constants/options.constant";
 import { Link } from 'react-router-dom';
 import LetterProps from "./Letter";
+import Slide from 'react-reveal/Slide';
 
 const FingerspellingApp = () => {
 
@@ -29,6 +30,7 @@ const FingerspellingApp = () => {
 
   return (
     <Fragment>
+     <Slide left>
       <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/"></Breadcrumb>
       <div className="option-letter">
         <span className="fontLibrasA fontSizeA fontBack">
@@ -59,7 +61,7 @@ const FingerspellingApp = () => {
         ))}
         <button onClick={downloadImage} className="btnDownload">Baixar imagem</button>
       </div>
-
+      </Slide>
     </Fragment>
   );
 }

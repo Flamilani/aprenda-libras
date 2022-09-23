@@ -8,6 +8,7 @@ import gif01 from '../../assets/gifs/bom-dia.gif';
 import gif02 from '../../assets/gifs/boa-tarde.gif';
 import gif03 from '../../assets/gifs/boa-noite.gif';
 
+import Slide from 'react-reveal/Slide';
 import ReactTooltip from 'react-tooltip';
 
 import './style.css';
@@ -53,14 +54,14 @@ class ThirdApp extends React.Component {
 
         return (
             <>
-                <form autoComplete="off">
-                <Breadcrumb title="Saudações" styles="sectionTop greetingTop" link="/"></Breadcrumb>
+                <Slide left>
+                    <Breadcrumb title="Saudações" styles="sectionTop ampliaTop" link="/"></Breadcrumb>
                     <div className="cardGroup greetingGroup">
                         <div onClick={this.handleChangeA} className="cardApp greeting">
                             {
                                 this.state.greetingA ?
-                                    <div>                                       
-                                        <ReactTooltip id="dia" place="top" effect="solid" />                                          
+                                    <div>
+                                        <ReactTooltip id="dia" place="top" effect="solid" />
                                         <img data-tip="Bom dia, estou tomando café" data-for="dia" src={gif01} alt="Bom dia em Libras" />
                                         <p>Bom dia em Libras</p>
                                     </div>
@@ -89,7 +90,7 @@ class ThirdApp extends React.Component {
                             }
                         </div>
                         <div onClick={this.handleChangeC} className="cardApp greeting">
-                        {
+                            {
                                 this.state.greetingC ?
                                     <div>
                                         <ReactTooltip id="noite" place="top" effect="solid" />
@@ -105,7 +106,7 @@ class ThirdApp extends React.Component {
                             }
                         </div>
                     </div>
-                </form>
+                </Slide>
             </>
         )
     }

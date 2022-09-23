@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cards } from '../../shared/constants/cards.constant';
+import Zoom from 'react-reveal/Zoom';
+
 import './style.css';
 
 function Home() {
@@ -15,16 +17,18 @@ function Home() {
     );
     return (
         <>
-            <div className="cardGroup cardHome">
-                {listCards}
-            </div>
-            <div className="breve">
-                <h3>Em Breve</h3>
-                <ul>
-                    <li>5 Parâmetros em Libras</li>
-                    <li>Frases em Libras</li>
-                </ul>
-            </div>
+            <Zoom>
+                <div className="cardGroup cardHome">
+                    {listCards}
+                </div>
+                <div className="breve">
+                    <h3>Em Breve</h3>
+                    <ul>
+                        <li>5 Parâmetros em Libras</li>
+                        <li>Frases em Libras</li>
+                    </ul>
+                </div>
+            </Zoom>
         </>
     )
 }

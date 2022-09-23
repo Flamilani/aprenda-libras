@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { Options } from "../../shared/constants/options.constant";
+import Slide from 'react-reveal/Slide';
 
 import './style.css';
 
@@ -22,7 +23,7 @@ const NumberApp = () => {
 
     return (
         <Fragment>
-            <section>
+            <Slide left>
                 <Breadcrumb title="Números" styles="sectionTop" link="/"></Breadcrumb>
                 <div className="formGroup number">
                     <label htmlFor="number">Número</label>
@@ -45,7 +46,7 @@ const NumberApp = () => {
                             ))}
                         </select>
                         <label>Número em Libras</label>
-                        
+
                         {options.map(option => (
                             number && selected === option.value &&
                             <p onChange={handleOptionChange} key={option.value} className={`result number ${option.style}`}>
@@ -54,8 +55,7 @@ const NumberApp = () => {
                         ))}
                     </div>
                 }
-
-            </section>
+            </Slide>
         </Fragment>
     )
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Alphabet } from "../../shared/constants/alphabet.constant";
 import { useParams } from "react-router-dom";
 import { Options } from "../../shared/constants/options.constant";
+import Fade from 'react-reveal/Fade';
 
 import './style.css';
 
@@ -23,6 +24,7 @@ const DetailApp = () => {
 
   return (
     <Fragment>
+      <Fade>
       <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/datilologia"></Breadcrumb>
       <div className="option-letter spaceBottom">
           <span className="fontLibrasA fontSizeA fontBack">
@@ -50,6 +52,7 @@ const DetailApp = () => {
           </p>
         ))}
       </div>
+      </Fade>
     </Fragment>
   );
 }
