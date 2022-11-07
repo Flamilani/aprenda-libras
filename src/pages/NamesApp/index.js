@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react"
-import * as htmlToImage from 'html-to-image';
+import React, { useState } from "react"
+/* import * as htmlToImage from 'html-to-image'; */
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { Options } from "../../shared/constants/options.constant";
 import { removeAcento } from '../../utils/helper';
@@ -9,7 +9,7 @@ import './style.css';
 
 const NamesApp = () => {
 
-    const domEl = useRef(null);
+    /* const domEl = useRef(null);
 
     const downloadImage = async () => {
         const dataUrl = await htmlToImage.toPng(domEl.current);
@@ -20,19 +20,17 @@ const NamesApp = () => {
         link.href = dataUrl;
         link.click();
     }
-
+ */
     const [name, setName] = useState('');
 
     const options = Options;
     const [selected, setSelected] = useState(options[0].value);
 
     const handleChange = (e) => {
-        console.log(e.target.value);
         setName(e.target.value);
     }
 
     const handleOptionChange = e => {
-        console.log(e.target.value);
         setSelected(e.target.value);
     }
 
@@ -70,15 +68,22 @@ const NamesApp = () => {
                     {options.map(option => (
                         name && selected === option.value &&
                         <div onChange={handleOptionChange} key={option.value}>
-                            <div className="result" id="domEl" ref={domEl}>
-                                <p className={option.style}>
+                            {/*             <div className="result" id="domEl" ref={domEl}>
+                                <p>
                                     {removeAcento(name)}
                                 </p>
                                 <p className="fonteOriginal">
                                     {removeAcento(name)}
                                 </p>
-                            </div>
-                            <button onClick={downloadImage} className="btnDownload">Baixar imagem</button>
+                            </div> */}
+                            <p className={`result ${option.style}`}>
+                                {removeAcento(name)}
+                            </p>
+                            <p className="fonteOriginal">
+                                {removeAcento(name)}
+                            </p>
+
+                            {/*    <button onClick={downloadImage} className="btnDownload">Baixar imagem</button> */}
                         </div>
                     ))}
                 </div>

@@ -4,7 +4,7 @@ main {
 
 .cardGroup {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -28,8 +28,15 @@ main {
 
 .cardHome {
     width: 100%;
-    max-width: 630px;
+    max-width: 480px;
     margin: 0 auto;
+}
+
+.cardHome h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .breve {
@@ -40,3 +47,10 @@ main {
 .breve li {
     list-style-type: none;
 }
+
+@media only screen and (max-width: 667px) {
+    .cardHome {
+        width: auto;
+        max-width: 320px;
+    }
+ }

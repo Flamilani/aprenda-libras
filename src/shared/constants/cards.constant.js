@@ -4,6 +4,9 @@ import capa02 from '../../assets/imgs/numeros.png';
 import capa03 from '../../assets/imgs/saudacoes.png';
 import capa04 from '../../assets/imgs/linha-tempo.png';
 import capa05 from '../../assets/imgs/quiz.png';
+import { Level } from './level.constant';
+
+const level = Level;
 
 export const Cards = [
 /*     {
@@ -15,36 +18,36 @@ export const Cards = [
         link: "/datilologia",
         title: "Datilologia",
         image: datilologia,
-        level: '',
+        levelId: level[0].id,
     },
     {
         link: "/nomes",
         title: "Nomes",
         image: capa01,
-        level: '',
+        levelId: level[0].id,
     },
     {
         link: "/numeros",
         title: "Números",
         image: capa02,
-        level: '',
+        levelId: level[0].id,
     },
     {
         link: "/saudacoes",
         title: "Saudações",
         image: capa03,
-        level: '',
+        levelId: level[0].id,
     },
     {
         link: "/linhadetempo",
         title: "Linha de Tempo",
         image: capa04,
-        level: '',
+        levelId: level[1].id,
     },
     {
         link: "/iniciarquiz",
         title: "Quiz",
         image: capa05,
-        level: '',
+        levelId: level[1].id,
     },
 ]
