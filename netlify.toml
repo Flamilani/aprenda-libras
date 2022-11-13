@@ -1,3 +1,10 @@
+[build]
+  base = "/"
+  publish = "build/"
+  
+  # Default build command.
+  command = "echo 'default context'"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
