@@ -12,6 +12,7 @@ import SlidesApp from '../pages/SlidesApp';
 import Slide01 from '../pages/SlidesApp/Slide01';
 import DetailLetterApp from '../pages/AlphabetApp/detail-letter';
 import QuizStartApp from '../pages/QuizApp';
+import MapsApp from '../pages/MapsApp/MapMundi';
 
 function RouteApp() {
     return (
@@ -36,7 +37,7 @@ function RouteApp() {
                 path="/datilologia/:id"
                 element={<DetailApp />}
             ></Route>
-                        <Route
+            <Route
                 path="/alfabeto"
                 element={<AlphabetApp />}
             ></Route>
@@ -62,6 +63,11 @@ function RouteApp() {
             <Route
                 path="/linhadetempo"
                 element={<TimelineApp />}
+            >
+            </Route>
+            <Route
+                path="/mapas"
+                element={<MapsApp />}
             >
             </Route>
             <Route

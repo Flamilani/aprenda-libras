@@ -14,3 +14,25 @@
 .formGroup.spaceBottom {
     margin-top: 25px;
 }
+
+.spacePrevNext {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.spacePrev {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnPrev {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.btnNext {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}

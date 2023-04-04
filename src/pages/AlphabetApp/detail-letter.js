@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { Options } from "../../shared/constants/options.constant";
 import Fade from 'react-reveal/Fade';
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 import './style.css';
 
@@ -43,6 +44,18 @@ const DetailLetterApp = () => {
             {quote.letter}
           </p>
         ))}
+                  <div className={Number(quote.id) !== 1 ? 'spacePrevNext' : 'spacePrev'}>
+            {Number(quote.id) !== 1 &&
+              <Link className="btnPrev" to={`/alfabeto/${Number(quote.id) - 1}`}>
+                <FaArrowAltCircleLeft size={30} />
+              </Link>
+            }
+            {Number(quote.id) !== 26 &&
+              <Link className="btnNext" to={`/alfabeto/${Number(quote.id) + 1}`}>
+                 <FaArrowAltCircleRight size={30} />
+              </Link>
+            }
+          </div>
       </div>
       </Fade>
     </Fragment>

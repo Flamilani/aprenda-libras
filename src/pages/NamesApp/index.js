@@ -79,10 +79,6 @@ const NamesApp = () => {
                             <p className={`result ${option.style}`}>
                                 {removeAcento(name)}
                             </p>
-                            <p className="fonteOriginal">
-                                {removeAcento(name)}
-                            </p>
-
                             {/*    <button onClick={downloadImage} className="btnDownload">Baixar imagem</button> */}
                         </div>
                     ))}

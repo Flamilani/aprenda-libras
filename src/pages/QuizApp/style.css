@@ -219,3 +219,8 @@ aside.quiz {
     font-weight: bold;
     font-size: 18px;
 }
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+}

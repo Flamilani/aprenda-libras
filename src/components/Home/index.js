@@ -13,15 +13,14 @@ function Home() {
             <Zoom>
                 {Level.map((levels) => (
                     <div className="cardGroup cardHome" key={levels.id}>
-                        {levels.showLevel === true &&
+                     {/*    {levels.showLevel === true &&
                             <h2>{levels.level}</h2>
-                        }
+                        } */}
                         <div className="cardGroup cardHome">
                             {cHome.map((list, index) => (
                                 levels.id === list.levelId &&
-                                <div>
-                                    <CardItems
-                                        key={index}
+                                <div key={index}>
+                                    <CardItems                                        
                                         link={list.link}
                                         title={list.title}
                                         image={list.image}

@@ -9,11 +9,11 @@ import { Level } from './level.constant';
 const level = Level;
 
 export const Cards = [
-/*     {
-        link: "/apresentacao",
-        title: "Apresentação",
-        image: alfabeto,
-    }, */
+    /*     {
+            link: "/apresentacao",
+            title: "Apresentação",
+            image: alfabeto,
+        }, */
     {
         link: "/datilologia",
         title: "Datilologia",
@@ -32,10 +32,16 @@ export const Cards = [
         image: capa02,
         levelId: level[0].id,
     },
+    /*     {
+            link: "/saudacoes",
+            title: "Saudações",
+            image: capa03,
+            levelId: level[0].id,
+        }, */
 /*     {
-        link: "/saudacoes",
-        title: "Saudações",
-        image: capa03,
+        link: "/mapas",
+        title: "Mapa",
+        image: capa04,
         levelId: level[0].id,
     }, */
     {

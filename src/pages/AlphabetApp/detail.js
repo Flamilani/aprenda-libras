@@ -5,7 +5,7 @@ import { Alphabet } from "../../shared/constants/alphabet.constant";
 import { useParams } from "react-router-dom";
 import { Options } from "../../shared/constants/options.constant";
 import Fade from 'react-reveal/Fade';
-
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import './style.css';
 
 const DetailApp = () => {
@@ -18,15 +18,14 @@ const DetailApp = () => {
   const [selected, setSelected] = useState(options[0].value);
 
   const handleOptionChange = e => {
-    console.log(e.target.value);
     setSelected(e.target.value);
   }
 
   return (
     <Fragment>
       <Fade>
-      <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/datilologia"></Breadcrumb>
-      <div className="option-letter spaceBottom">
+        <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/datilologia"></Breadcrumb>
+        <div className="option-letter spaceBottom">
           <span className="fontLibrasA fontSizeA fontBack">
             ABC
           </span>
@@ -36,22 +35,34 @@ const DetailApp = () => {
             </span>
           </Link>
         </div>
-      <div className="formGroup spaceBottom">
-        <select className="formControl optionFonts" value={selected} onChange={handleOptionChange}>
-          {options.map(option => (
-            <option key={option.value} value={option.value}>
-              {option.text}
-            </option>
-          ))}
-        </select>
+        <div className="formGroup spaceBottom">
+          <select className="formControl optionFonts" value={selected} onChange={handleOptionChange}>
+            {options.map(option => (
+              <option key={option.value} value={option.value}>
+                {option.text}
+              </option>
+            ))}
+          </select>
 
-        {options.map(option => (
-          selected === option.value &&
-          <p onChange={handleOptionChange} key={option.value} className={`result detail ${option.style}`}>
-            {quote.letter}
-          </p>
-        ))}
-      </div>
+          {options.map(option => (
+            selected === option.value &&
+            <p onChange={handleOptionChange} key={option.value} className={`result detail ${option.style}`}>
+              {quote.letter}
+            </p>
+          ))}
+          <div className={Number(quote.id) !== 1 ? 'spacePrevNext' : 'spacePrev'}>
+            {Number(quote.id) !== 1 &&
+              <Link className="btnPrev" to={`/datilologia/${Number(quote.id) - 1}`}>
+                <FaArrowAltCircleLeft size={30} />
+              </Link>
+            }
+            {Number(quote.id) !== 26 &&
+              <Link className="btnNext" to={`/datilologia/${Number(quote.id) + 1}`}>
+                 <FaArrowAltCircleRight size={30} />
+              </Link>
+            }
+          </div>
+        </div>
       </Fade>
     </Fragment>
   );
