@@ -11,8 +11,8 @@ footer {
 footer svg {
     color: darkcyan;
     font-size: 20px;
-    vertical-align: bottom;
-    margin-left: 5px;
+    vertical-align: sub;
+    margin-right: 5px;
 }
 
 footer .icone {

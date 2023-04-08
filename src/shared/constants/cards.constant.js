@@ -4,6 +4,7 @@ import capa02 from '../../assets/imgs/numeros.png';
 // import capa03 from '../../assets/imgs/saudacoes.png';
 import capa04 from '../../assets/imgs/linha-tempo.png';
 import capa05 from '../../assets/imgs/quiz.png';
+import capa06 from '../../assets/imgs/parametros.png';
 import { Level } from './level.constant';
 
 const level = Level;
@@ -54,6 +55,12 @@ export const Cards = [
         link: "/iniciarquiz",
         title: "Quiz",
         image: capa05,
+        levelId: level[1].id,
+    },
+    {
+        link: "/cm",
+        title: "Parâmetros da Libras",
+        image: capa06,
         levelId: level[1].id,
     },
 ]

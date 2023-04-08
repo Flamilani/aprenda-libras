@@ -1,6 +1,7 @@
 {
-  "short_name": "Aprenda Libras",
-  "name": "Aprenda Libras de forma digital e interativa",
+  "short_name": "Libras Virtual",
+  "name": "App Libras Virtual",
+  "description": "Aplicativo Libras Virtual para aprender a Libras de forma digital e interativa",
   "icons": [
     {
       "src": "favicon.ico",

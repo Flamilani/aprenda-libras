@@ -13,6 +13,9 @@ import Slide01 from '../pages/SlidesApp/Slide01';
 import DetailLetterApp from '../pages/AlphabetApp/detail-letter';
 import QuizStartApp from '../pages/QuizApp';
 import MapsApp from '../pages/MapsApp/MapMundi';
+import HandConfigurationApp from '../pages/ParametersApp/HandConfiguration';
+import MovimentApp from '../pages/ParametersApp/Movement';
+import DirectionalityApp from '../pages/ParametersApp/Directionality';
 
 function RouteApp() {
     return (
@@ -78,7 +81,22 @@ function RouteApp() {
             <Route
                 path="/quiz"
                 element={<QuizApp />}
-            >
+            >                
+            </Route>
+            <Route
+                path="/cm"
+                element={<HandConfigurationApp />}
+            >                
+            </Route>
+            <Route
+                path="/movimentos"
+                element={<MovimentApp />}
+            >                
+            </Route>
+            <Route
+                path="/direcionalidade"
+                element={<DirectionalityApp />}
+            >                
             </Route>
         </Routes>
     )

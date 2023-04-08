@@ -1,0 +1,93 @@
+.fundoHands {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 535px;
+    border: 2px solid #979797;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    padding-top: 15px;
+    text-align: center;
+    word-break: break-word;
+}
+
+/*  CONFIGURATIONS  */
+
+.config {
+    display: inline;
+}
+
+.imgConfig {
+    width: 100%;
+    max-width: 80px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 540px) {
+    .fundoHands {
+        margin: 8px;
+        margin-top: 25px;
+        width: auto;
+
+   }
+ }
+
+ .linkOpen {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #3f51b5;
+    font-weight: 900;
+    font-size: 25px;   
+    position: absolute;
+    top: -33px;
+    right: 0px; 
+ }
+
+ .sheet .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+ }
+
+ .sheet .content {
+    padding: 10px;
+ }
+
+ /*  MOVIMENTS  */
+
+ .moviment {
+    display: inline-block;
+    margin: 10px;
+ }
+
+ .moviment .imgMov {
+    width: 100%;
+    max-width: 130px;
+ }
+
+ .moviment .legend {
+    text-transform: capitalize;
+    font-weight: bold;
+ }
+
+ /*  DIRECTIONALITY  */
+
+ .direction {
+    display: inline-block;
+    margin: 10px;
+ }
+
+ .direction .imgDir {
+    width: 100%;
+    max-width: 130px;
+ }
+
+ .direction .legend {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 12px;
+ }
