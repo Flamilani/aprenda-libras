@@ -30,13 +30,12 @@ function Home() {
                         </div>
                     </div>
                 ))}
-                <div className="breve">
+{/*                 <div className="breve">
                     <h3>Em Breve</h3>
                     <ul>
-                        <li>5 Parâmetros em Libras</li>
                         <li>Frases em Libras</li>
                     </ul>
-                </div>
+                </div> */}
             </Zoom>
         </>
     )

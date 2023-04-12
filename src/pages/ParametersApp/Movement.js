@@ -37,7 +37,7 @@ const MovimentApp = () => {
                     <Link className="linkOpen" onClick={() => setOpen(true)}>
                         <BsFillInfoSquareFill />
                     </Link>
-                    <MovProps />
+                    <MovProps styles="imgMov" />
                 </div>
             </Slide>
         </Fragment>

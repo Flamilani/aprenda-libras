@@ -12,9 +12,10 @@ const CMProps = () => {
     cConfig.forEach((list, index) => {
         listCM.push(
             <div className="config" key={index}>
-                <Link to={list.id}>
+               {/*  <Link to={list.id}> */} 
+              {/*  <span className="numberConfig">{list.id}</span> */}
                    <img className="imgConfig" src={list.cm} alt="" />
-                </Link>
+            {/*     </Link> */}
             </div>
         )
     });

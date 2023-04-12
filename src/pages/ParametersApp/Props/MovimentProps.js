@@ -3,7 +3,7 @@ import { Moviments } from '../../../shared/constants/parameters/moviments.consta
 
 import './../style.css';
 
-const MovProps = () => {
+const MovProps = (props) => {
 
     const cMov = Moviments;
 
@@ -12,10 +12,10 @@ const MovProps = () => {
     cMov.forEach((list, index) => {
         lists.push(
             <div className="moviment" key={index}>
-                <Link to={list.id}>
-                   <img className="imgMov" src={list.moviment} alt={list.name} />
+               {/*  <Link to={list.id}> */}
+                   <img className={props.styles} src={list.moviment} alt={list.name} />
                    <div className="legend">{list.name}</div>
-                </Link>
+               {/*  </Link> */}
             </div>
         )
     });

@@ -1,6 +1,7 @@
 .result.detail {
-    font-size: 20rem;
+    font-size: 15rem;
     padding: 0px;
+    padding-top: 10px;
 }
 
 .result.letter-alphabet span {

@@ -16,6 +16,8 @@ import MapsApp from '../pages/MapsApp/MapMundi';
 import HandConfigurationApp from '../pages/ParametersApp/HandConfiguration';
 import MovimentApp from '../pages/ParametersApp/Movement';
 import DirectionalityApp from '../pages/ParametersApp/Directionality';
+import ArticulationApp from '../pages/ParametersApp/PointArticulation';
+import ParametersApp from '../pages/ParametersApp';
 
 function RouteApp() {
     return (
@@ -84,6 +86,11 @@ function RouteApp() {
             >                
             </Route>
             <Route
+                path="/parametros"
+                element={<ParametersApp />}
+            >                
+            </Route>
+            <Route
                 path="/cm"
                 element={<HandConfigurationApp />}
             >                
@@ -96,6 +103,11 @@ function RouteApp() {
             <Route
                 path="/direcionalidade"
                 element={<DirectionalityApp />}
+            >                
+            </Route>
+            <Route
+                path="/articulacao"
+                element={<ArticulationApp />}
             >                
             </Route>
         </Routes>

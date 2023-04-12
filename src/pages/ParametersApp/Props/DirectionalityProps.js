@@ -3,7 +3,7 @@ import { Directionalities } from '../../../shared/constants/parameters/direction
 
 import './../style.css';
 
-const DirectProps = () => {
+const DirectProps = (props) => {
 
     const cDir = Directionalities;
 
@@ -12,10 +12,10 @@ const DirectProps = () => {
     cDir.forEach((list, index) => {
         lists.push(
             <div className="direction" key={index}>
-                <Link to={list.id}>
-                   <img className="imgDir" src={list.direction} alt={list.name} />
+              {/*   <Link to={list.id}> */}
+                   <img className={props.styles} src={list.direction} alt={list.name} />
                    <div className="legend">{list.name}</div>
-                </Link>
+               {/*  </Link> */}
             </div>
         )
     });

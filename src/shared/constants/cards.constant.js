@@ -1,10 +1,10 @@
-import datilologia from '../../assets/imgs/alfabeto-manual.png';
+import datilologia from '../../assets/imgs/datilologia.png';
 import capa01 from '../../assets/imgs/capa01.png';
 import capa02 from '../../assets/imgs/numeros.png';
 // import capa03 from '../../assets/imgs/saudacoes.png';
 import capa04 from '../../assets/imgs/linha-tempo.png';
 import capa05 from '../../assets/imgs/quiz.png';
-import capa06 from '../../assets/imgs/parametros.png';
+import capa06 from '../../assets/imgs/parametros-leg.png';
 import { Level } from './level.constant';
 
 const level = Level;
@@ -49,18 +49,18 @@ export const Cards = [
         link: "/linhadetempo",
         title: "Linha de Tempo",
         image: capa04,
-        levelId: level[1].id,
+        levelId: level[0].id,
     },
     {
         link: "/iniciarquiz",
         title: "Quiz",
         image: capa05,
-        levelId: level[1].id,
+        levelId: level[0].id,
     },
     {
-        link: "/cm",
-        title: "Parâmetros da Libras",
+        link: "/parametros",
+        title: "Parâmetros",
         image: capa06,
-        levelId: level[1].id,
+        levelId: level[0].id,
     },
 ]

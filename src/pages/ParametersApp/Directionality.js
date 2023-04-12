@@ -38,7 +38,7 @@ const DirectionalityApp = () => {
                     <Link className="linkOpen" onClick={() => setOpen(true)}>
                         <BsFillInfoSquareFill />
                     </Link>
-                    <DirectProps />
+                    <DirectProps styles="imgDir" />
                 </div>
             </Slide>
         </Fragment>

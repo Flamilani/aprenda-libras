@@ -9,7 +9,7 @@ export const Level = [
       id: 2,
       level: 'Intermediário',
       levelId: 'INTERMEDIARY',
-      showLevel: true
+      showLevel: false
     },
     {
       id: 3,

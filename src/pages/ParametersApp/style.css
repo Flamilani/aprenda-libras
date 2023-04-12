@@ -13,7 +13,73 @@
     word-break: break-word;
 }
 
+/* PARAMETERS */
+
+.fundoParametros {
+   background: url("../../assets/imgs/parametros.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   height: 345px;
+   width: 347px;
+   display: flex;
+   justify-content: space-evenly;
+   background-color: #fff;
+ }
+
+ .parameterAbbr {
+   color: #ff0000;
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 20px;
+ }
+
+ .parameterConfig {
+   position: relative;
+   top: 110px;
+ }
+
+ .parameterArticulation {
+   position: relative;
+   right: 8px;
+   top: 10px;
+ }
+
+ .parameterDirection {
+   position: relative;
+   right: 2px;
+   bottom: 5px;
+ }
+
+ .parameterMoviment {
+   position: relative;
+    top: 20px;
+    right: 5px;
+ }
+
+ .parameterFace {
+   position: relative;
+    top: 60px;
+    right: 12px;
+ }
+
+ .legend {
+  text-transform: capitalize;
+ }
+
 /*  CONFIGURATIONS  */
+
+.numberConfig {
+  position: absolute;
+  background-color: #777;
+  color: #fff;
+  border-radius: 50%;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 13px;
+  display: inline;
+  left: 11px;
+}
 
 .config {
     display: inline;
@@ -69,10 +135,10 @@
     max-width: 130px;
  }
 
- .moviment .legend {
-    text-transform: capitalize;
-    font-weight: bold;
- }
+ .moviment .imgMovParam {
+   width: 100%;
+   max-width: 120px;
+}
 
  /*  DIRECTIONALITY  */
 
@@ -86,8 +152,219 @@
     max-width: 130px;
  }
 
+.imgDirectorParam {
+   width: 100%;
+   max-width: 100px;
+}
+
  .direction .legend {
-    text-transform: capitalize;
-    font-weight: bold;
     font-size: 12px;
+ }
+
+ /*  ARTICULATION  */
+
+ .fundoCorpo, .fundoEspaco {
+   margin: 0 auto;
+   margin-top: 25px;
+   margin-bottom: 10px;
+   width: 100%;
+   max-width: 535px;
+   border: 2px solid #979797;
+   border-radius: 10px;
+   background: #fff;
+   padding: 10px;
+   padding-top: 15px;
+   text-align: center;
+   word-break: break-word;
+}
+
+ .bodyPoint {
+   background: url("../../assets/imgs/articulation/corpo.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: local;
+   background-size: 250px;
+   height: 440px;
+ }
+
+ .spacePoint {
+   background: url("../../assets/imgs/articulation/espaco.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+
+
+ /* EXPRESSION  */
+ .expression {
+   display: inline-block;
+   margin: 10px;
+ }
+
+ .imgExp {
+   width: 100%;
+   max-width: 100px;
+ }
+
+ /* ARTICULATION BODY */
+ .head {
+  position: relative;
+  bottom: 3px;
+  right: 20px;
+}
+
+.head img {
+  width: 90px;
+}
+
+.forehead {
+  position: relative;
+  bottom: 18px;
+  right: 21px;  
+}
+
+.forehead img {
+  width: 56px;
+}
+
+.eye {
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+}
+
+.eye img {
+  width: 73px
+}
+
+.ear {
+  position: relative;
+  bottom: 53px;
+  left: 24px;
+  display: inline;
+}
+
+.ear img {
+  width: 30px;
+}
+
+.nose {
+  position: relative;
+  bottom: 146px;
+  right: 18px;
+}
+
+.mouth {
+  position: relative;
+  bottom: 154px;
+  right: 20px;
+}
+
+.cheek {
+  position: relative;
+  bottom: 96px;
+  right: 44px;
+}
+
+.cheek img {
+  width: 25px;
+}
+
+.chin {
+  position: relative;
+  bottom: 162px;
+  right: 20px;
+}
+
+.shoulder {
+  position: relative;
+  bottom: 200px;
+  right: 20px;
+}
+
+.shoulder img {
+  width: 200px;
+}
+
+.neck {
+  position: relative;
+  bottom: 172px;
+  right: 21px;
+}
+
+.neck img {
+  width: 45px;
+}
+
+.halfChest {
+  position: relative;
+  bottom: 290px;
+  right: 30px;
+}
+
+.halfChest img {
+  width: 55px;
+}
+
+.chest {
+  position: relative;
+  bottom: 222px;
+  right: 30px;
+}
+
+.chest img {
+  width: 145px;
+}
+
+.palmHand {
+  position: relative;
+  bottom: 240px;
+}
+
+.palmHand img {
+  width: 42px;
+}
+
+.handPulse {
+  position: relative;
+  bottom: 325px;
+  left: 16px;
+}
+
+.handPulse img {
+  width: 50px;
+}
+
+.arm {
+  position: relative;
+  bottom: 422px;
+  left: 72px;
+  display: inline;
+}
+
+.arm img {
+  width: 55px;
+}
+
+.elbow {
+  position: relative;
+  bottom: 435px;
+  left: 88px;
+  display: inline;
+}
+
+.elbow img {
+  width: 37px;
+}
+
+.abdomen {
+  position: relative;
+  bottom: 500px;
+  right: 20px;
+} 
+
+ /* SHEET CONFIGURATION */
+ 
+ h2.marginBottom {
+   font-weight: bold;
+   margin-bottom: 12px;
  }
