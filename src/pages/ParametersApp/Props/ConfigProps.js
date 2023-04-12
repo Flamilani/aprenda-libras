@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Configuration } from '../../../shared/constants/parameters/configuration.constant';
 
 import './../style.css';

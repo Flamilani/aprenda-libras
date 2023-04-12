@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Articulations } from '../../../shared/constants/parameters/articulation.constant';
 
 import './../style.css';
