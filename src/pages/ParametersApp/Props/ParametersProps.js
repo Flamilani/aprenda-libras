@@ -29,7 +29,7 @@ const ParametersProps = () => {
                         <Sheet
                             isOpen={isOpenCM}
                             onClose={() => setOpenCM(false)}
-                            snapPoints={[590]}
+                            snapPoints={[680]}
                         >
                             <Sheet.Container>
                                 <Sheet.Content>
@@ -52,7 +52,7 @@ const ParametersProps = () => {
                         <Sheet
                             isOpen={isOpenPA}
                             onClose={() => setOpenPA(false)}
-                            snapPoints={[590]}
+                            snapPoints={[680]}
                         >
                             <Sheet.Container>
                                 <Sheet.Content>
@@ -80,7 +80,7 @@ const ParametersProps = () => {
                         <Sheet
                             isOpen={isOpenOM}
                             onClose={() => setOpenPA(false)}
-                            snapPoints={[590]}
+                            snapPoints={[680]}
                         >
                             <Sheet.Container>
                                 <Sheet.Content>
@@ -105,7 +105,7 @@ const ParametersProps = () => {
                         <Sheet
                             isOpen={isOpenM}
                             onClose={() => setOpenM(false)}
-                            snapPoints={[590]}
+                            snapPoints={[680]}
                         >
                             <Sheet.Container>
                                 <Sheet.Content>
@@ -130,7 +130,7 @@ const ParametersProps = () => {
                         <Sheet
                             isOpen={isOpenEF}
                             onClose={() => setOpenEF(false)}
-                            snapPoints={[590]}
+                            snapPoints={[680]}
                         >
                             <Sheet.Container>
                                 <Sheet.Content>

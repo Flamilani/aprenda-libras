@@ -1,7 +1,10 @@
 .result.detail {
     font-size: 15rem;
     padding: 0px;
-    padding-top: 10px;
+}
+
+.result.fontLibrasB {
+    padding-top: 20px;
 }
 
 .result.letter-alphabet span {

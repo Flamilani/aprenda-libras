@@ -55,6 +55,14 @@ main {
    main {
       min-height: calc(100vh - 80px);
    }
+   .footerHome {
+      margin-top: 20px !important;
+   }
+}
+
+ 
+.footerHome {
+   margin-top: 23px;
 }
 
 footer {
@@ -126,15 +134,16 @@ a:active {
  }
 
  .fontLibrasA {
-    font-family: "Libras-2016";
+   font-family: "Libras 2019";
  }
 
  .fontLibrasB {
-    font-family: "LIBRAS PROF CLEBER COUTO";
+    font-family: "Libras-2016";
+    padding-top: 25px;
  }
 
  .fontLibrasC {
-    font-family: "Libras 2019";
+   font-family: "LIBRAS PROF CLEBER COUTO";
  }
 
  .fontLibrasD {
@@ -193,10 +202,6 @@ a:active {
     padding: 10px;
     margin-left: 10px;
  }
- 
-.footerHome {
-   margin-top: 19px;
-}
 
 .iconClose svg {
    float: right;
@@ -218,7 +223,6 @@ a:active {
    color: #000;
    padding: 10px;
    overflow: auto;
-   height: min(670px, calc(100% - env(safe-area-inset-top) - 34px)) !important;
  }
  .react-modal-sheet-header {
    background-color: #ebe9e9;
