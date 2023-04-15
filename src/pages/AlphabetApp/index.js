@@ -5,6 +5,9 @@ import { Options } from "../../shared/constants/options.constant";
 import { Link } from 'react-router-dom';
 import LetterProps from "./Letter";
 import Slide from 'react-reveal/Slide';
+import JoyRide from "react-joyride";
+import { STEPS_LETTERS } from "../../shared/constants/steps-tour.constante";
+import { BsFillQuestionCircleFill } from 'react-icons/bs';
 
 const FingerspellingApp = () => {
 
@@ -20,6 +23,13 @@ const FingerspellingApp = () => {
   //   link.click();
   // }
 
+  const [step, setStep] = useState(false);
+
+  const handleClickStart = (event) => {
+    event.preventDefault();
+    setStep(true);
+  };
+
   const options = Options;
 
   const [selected, setSelected] = useState(options[0].value);
@@ -32,25 +42,47 @@ const FingerspellingApp = () => {
     <Fragment>
       <Slide left>
         <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/"></Breadcrumb>
+        <JoyRide
+          steps={STEPS_LETTERS}
+          continuous={true}
+          scrollToFirstStep
+          showSkipButton={true}
+          showProgress={true}
+          run={step}
+          locale={{
+            last: "Último",
+            next: 'Próximo',
+            skip: "Pular",
+            back: 'Voltar',
+            close: 'Fechar'
+          }}
+          styles={{
+            options: {
+              zIndex: 10000,
+            },
+          }}
+        />
         <div className="option-letter">
           <span className="fontLibrasA fontSizeA fontBack">
             ABC
           </span>
           <Link to="/alfabeto">
-            <span className="fontSizeB">
+            <span className="third-step-finger fontSizeB">
               ABC
             </span>
           </Link>
         </div>
-
-        <div className="formGroup spaceBottom">
-          <select className="formControl optionFonts" value={selected} onChange={handleOptionChange}>
-            {options.map(option => (
+        <div className="first-step-finger formGroup spaceBottom">
+        <select className="second-step-finger formControl optionFonts" value={selected} onChange={handleOptionChange}>
+          {options.map(option => (
               <option key={option.value} value={option.value}>
                 {option.text}
               </option>
             ))}
           </select>
+          {step === false &&
+            <Link className="stepsTour" onClick={handleClickStart}><BsFillQuestionCircleFill size={22} /> </Link>
+          }       
           {options.map(option => (
             selected === option.value &&
             /*           <div key={option.value} id="domEl" ref={domEl}>

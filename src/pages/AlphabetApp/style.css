@@ -12,11 +12,11 @@
 }
 
 .formControl.optionFonts {
-    margin-top: -35px;
+    margin-bottom: 12px;
 }
 
 .formGroup.spaceBottom {
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 .spacePrevNext {
@@ -40,3 +40,9 @@
     justify-content: flex-end;
     margin-top: 15px;
 }
+
+.stepsTour {
+    float: right;
+    margin-top: 6px;
+    margin-right: 3px;
+ }

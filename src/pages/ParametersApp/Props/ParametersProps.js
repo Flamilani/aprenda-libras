@@ -23,7 +23,7 @@ const ParametersProps = () => {
 
     cPar.forEach((list, index) => {
         lists.push(
-            <div key={index}>
+            <div key={index}>                
                 {list.abbr === 'cm' &&
                     <>
                         <Sheet
@@ -42,8 +42,8 @@ const ParametersProps = () => {
                             </Sheet.Container>
                             <Sheet.Backdrop onClick={() => setOpenCM(false)} />
                         </Sheet>
-                        <Link onClick={() => setOpenCM(true)}>
-                            <div className={`parameterAbbr ${list.style}`}>{list.abbr}</div>
+                        <Link onClick={() => setOpenCM(true)}>                       
+                            <div className={`first-step parameterAbbr ${list.style}`}>{list.abbr}</div>
                         </Link>
                     </>
                 }
@@ -61,9 +61,9 @@ const ParametersProps = () => {
                                     </Link>
                                     <h2 className="marginBottom">{list.name}</h2>
                                     <div className="fundoCorpo bodyPoint">
-                                         <ArticulationProps type="corpo" />
+                                        <ArticulationProps type="corpo" />
                                     </div>
-        {/*                             <div className="fundoEspaco spacePoint">
+                                    {/*                             <div className="fundoEspaco spacePoint">
                                         <ArticulationProps type="espaco" />
                                     </div> */}
                                 </Sheet.Content>
@@ -71,7 +71,7 @@ const ParametersProps = () => {
                             <Sheet.Backdrop onClick={() => setOpenPA(false)} />
                         </Sheet>
                         <Link onClick={() => setOpenPA(true)}>
-                            <div className={`parameterAbbr ${list.style}`}>{list.abbr}</div>
+                            <div className={`second-step parameterAbbr ${list.style}`}>{list.abbr}</div>
                         </Link>
                     </>
                 }
@@ -89,14 +89,14 @@ const ParametersProps = () => {
                                     </Link>
                                     <h2 className="marginBottom">{list.name}</h2>
                                     <div className="fundoHands">
-                                         <DirectProps styles="imgDirectorParam" />
+                                        <DirectProps styles="imgDirectorParam" />
                                     </div>
                                 </Sheet.Content>
                             </Sheet.Container>
                             <Sheet.Backdrop onClick={() => setOpenOM(false)} />
                         </Sheet>
                         <Link onClick={() => setOpenOM(true)}>
-                            <div className={`parameterAbbr ${list.style}`}>{list.abbr}</div>
+                            <div className={`third-step parameterAbbr ${list.style}`}>{list.abbr}</div>
                         </Link>
                     </>
                 }
@@ -114,14 +114,14 @@ const ParametersProps = () => {
                                     </Link>
                                     <h2 className="marginBottom">{list.name}</h2>
                                     <div className="fundoHands">
-                                         <MovProps styles="imgMovParam" />
+                                        <MovProps styles="imgMovParam" />
                                     </div>
                                 </Sheet.Content>
                             </Sheet.Container>
                             <Sheet.Backdrop onClick={() => setOpenM(false)} />
                         </Sheet>
                         <Link onClick={() => setOpenM(true)}>
-                            <div className={`parameterAbbr ${list.style}`}>{list.abbr}</div>
+                            <div className={`four-step parameterAbbr ${list.style}`}>{list.abbr}</div>
                         </Link>
                     </>
                 }
@@ -139,14 +139,14 @@ const ParametersProps = () => {
                                     </Link>
                                     <h2 className="marginBottom">{list.name}</h2>
                                     <div className="fundoHands">
-                                         <ExpressionsProps />
+                                        <ExpressionsProps />
                                     </div>
                                 </Sheet.Content>
                             </Sheet.Container>
                             <Sheet.Backdrop onClick={() => setOpenEF(false)} />
                         </Sheet>
                         <Link onClick={() => setOpenEF(true)}>
-                            <div className={`parameterAbbr ${list.style}`}>{list.abbr}</div>
+                            <div className={`five-step parameterAbbr ${list.style}`}>{list.abbr}</div>
                         </Link>
                     </>
                 }
@@ -155,7 +155,7 @@ const ParametersProps = () => {
     });
 
     return (
-        <>
+        <>   
             {lists}
         </>
     )
