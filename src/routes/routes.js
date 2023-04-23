@@ -14,10 +14,12 @@ import DetailLetterApp from '../pages/AlphabetApp/detail-letter';
 import QuizStartApp from '../pages/QuizApp';
 import MapsApp from '../pages/MapsApp/MapMundi';
 import HandConfigurationApp from '../pages/ParametersApp/HandConfiguration';
-import MovimentApp from '../pages/ParametersApp/Movement';
+import MovimentApp from '../pages/ParametersApp/Moviment';
 import DirectionalityApp from '../pages/ParametersApp/Directionality';
 import ArticulationApp from '../pages/ParametersApp/PointArticulation';
 import ParametersApp from '../pages/ParametersApp';
+import DetailConfigurationApp from '../pages/ParametersApp/details/DetailConfigurationApp';
+import Steppers from '../pages/ParametersApp/Steppers';
 
 function RouteApp() {
     return (
@@ -96,6 +98,11 @@ function RouteApp() {
             >                
             </Route>
             <Route
+                path="/cm/:id"
+                element={<DetailConfigurationApp />}
+            >                
+            </Route>
+            <Route
                 path="/movimentos"
                 element={<MovimentApp />}
             >                
@@ -108,6 +115,11 @@ function RouteApp() {
             <Route
                 path="/articulacao"
                 element={<ArticulationApp />}
+            >                
+            </Route>
+            <Route
+                path="/etapas"
+                element={<Steppers />}
             >                
             </Route>
         </Routes>

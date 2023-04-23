@@ -32,6 +32,7 @@
     "react-shepherd": "^4.2.0",
     "react-simple-maps": "^3.0.0",
     "react-speech": "^1.0.2",
+    "react-step-wizard": "^5.3.11",
     "react-tabs": "^5.1.0",
     "react-tooltip": "^4.2.21",
     "react-vertical-timeline-component": "^3.5.2",

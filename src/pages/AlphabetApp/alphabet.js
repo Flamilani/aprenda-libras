@@ -1,8 +1,8 @@
 import React, { Fragment } from "react"
 import { Breadcrumb } from '../../components/Breadcrumb';
-import { Link } from 'react-router-dom';
 import LetterProps from "./Letter";
 import Slide from 'react-reveal/Slide';
+import Buttons from "../../components/Buttons/Buttons";
 
 const AlphabetApp = () => {
 
@@ -10,16 +10,7 @@ const AlphabetApp = () => {
     <Fragment>
       <Slide right>
       <Breadcrumb title="Alfabeto em Português" styles="sectionTop" link="/"></Breadcrumb>
-      <div className="option-letter spaceBottom">
-        <Link to="/datilologia">
-          <span className="fontLibrasA fontSizeA">
-            ABC
-          </span>
-        </Link>
-        <span className="fontSizeB fontBack">
-          ABC
-        </span>
-      </div>
+      <Buttons type="datilologia" redirect="/datilologia" />
       <div className="formGroup">
         <p className="result letter-alphabet">
           <LetterProps />

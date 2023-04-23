@@ -1,12 +1,11 @@
 import React, { Fragment, useState } from "react"
 import { Breadcrumb } from '../../components/Breadcrumb';
-import { Link } from 'react-router-dom';
 import { Alphabet } from "../../shared/constants/alphabet.constant";
 import { useParams } from "react-router-dom";
 import { Options } from "../../shared/constants/options.constant";
-import Fade from 'react-reveal/Fade';
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import './style.css';
+import Buttons from "../../components/Buttons/Buttons";
+import Arrows from "../../components/Arrows/Arrows";
 
 const DetailApp = () => {
 
@@ -23,18 +22,8 @@ const DetailApp = () => {
 
   return (
     <Fragment>
-      <Fade>
         <Breadcrumb title="Datilologia em Libras" styles="sectionTop" link="/datilologia"></Breadcrumb>
-        <div className="option-letter spaceBottom">
-          <span className="fontLibrasA fontSizeA fontBack">
-            ABC
-          </span>
-          <Link to={`/alfabeto/${quote.id}`}>
-            <span className="fontSizeB">
-              ABC
-            </span>
-          </Link>
-        </div>
+        <Buttons type="alfabeto" redirect={`/alfabeto/${quote.id}`} />
         <div className="formGroup spaceBottom">
           <select className="formControl optionFonts" value={selected} onChange={handleOptionChange}>
             {options.map(option => (
@@ -50,20 +39,8 @@ const DetailApp = () => {
               {quote.letter}
             </p>
           ))}
-          <div className={Number(quote.id) !== 1 ? 'spacePrevNext' : 'spacePrev'}>
-            {Number(quote.id) !== 1 &&
-              <Link className="btnPrev" to={`/datilologia/${Number(quote.id) - 1}`}>
-                <FaArrowAltCircleLeft size={30} />
-              </Link>
-            }
-            {Number(quote.id) !== 26 &&
-              <Link className="btnNext" to={`/datilologia/${Number(quote.id) + 1}`}>
-                 <FaArrowAltCircleRight size={30} />
-              </Link>
-            }
-          </div>
+          <Arrows id={quote.id} redirect="datilologia" lastNumer={26} />
         </div>
-      </Fade>
     </Fragment>
   );
 }
